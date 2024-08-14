@@ -1,0 +1,44 @@
+[
+    {
+      "firstName": "Luke",
+      "lastName": "Skywalker",
+      "email": "lSkywalker0504@gmail.com",
+      "password": "ubrurb483ofbso39fn",
+      "admin": false
+    },
+    {
+      "firstName": "Leia",
+      "lastName": "Organa",
+      "email": "lOrgana0504@gmail.com",
+      "password": "ubrurfhfjvnsnkw&",
+      "admin": true
+    },
+    {
+      "firstName": "Padma",
+      "lastName": "Amadala",
+      "email": "PAmadala7649293@gmail.com",
+      "password": "cmchjn733974j",
+      "admin": true
+    },
+    {
+      "firstName": "Obi-Wan",
+      "lastName": "Kenobi",
+      "email": "ObWanK3n0bb1@gmail.com",
+      "password": "jdjjenj83492jnc",
+      "admin": false
+    },
+    {
+      "firstName": "Mace",
+      "lastName": "Windu",
+      "email": "MACE@gmail.com",
+      "password": "djdjkndmonsiincnd",
+      "admin": false
+    },
+    {
+      "firstName": "Yoda",
+      "lastName": "GreenMan",
+      "email": "ldjjdine504@gmail.com",
+      "password": "ubrsjejniuro39fn",
+      "admin": false
+    }
+  ]
