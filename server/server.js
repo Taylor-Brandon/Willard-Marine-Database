@@ -10,3 +10,5 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
   });
+
+  const app = express();
