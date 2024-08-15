@@ -1,11 +1,11 @@
 const { Schema, model } = require("mongoose");
 
 const shipSchema = new Schema({
-    Ship: {
+    shipName: {
         type: String,
         required: true
     },
-    Model: { 
+    model: { 
         type: String
     },
     HRN: {
@@ -53,7 +53,7 @@ const shipSchema = new Schema({
     POCPhoneNumber: { 
         type: String
     },
-    Notes: { 
+    notes: { 
         type: String
     },
     user: 

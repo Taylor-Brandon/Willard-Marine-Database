@@ -1,5 +1,5 @@
 const User = require('./user');
-const Ship = require('./solas');
+const Ship = require('./ship');
 const Pdf = require('./pdf');
 
 
