@@ -13,8 +13,8 @@ type User {
 }
 type Ship {
     _id: ID
-    Ship: String
-    Model: String
+    shipName: String
+    model: String
     HRN: String
     HIN: String
     contactNumber: String
@@ -27,7 +27,7 @@ type Ship {
     POCName: String
     POCEmail: String
     POCPhoneNumber: String
-    Notes: String
+    notes: String
     user: User
 }
 type Pdf {
@@ -43,17 +43,17 @@ type Pdf {
   type Query {
     users: [User]
     user(userId: ID!): User
-    ships: [Ship]!
+    ships: [Ship]
     ship(shipId: ID!): Ship
-    pdfs: [Pdf]!
+    pdfs: [Pdf]
     pdf(pdfId: ID!): Pdf
 }
 type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!, admin: Boolean!): Auth
     login(email: String!, password: String!): Auth
     addShip(
-      Ship: String!
-      Model: String!
+      shipName: String!
+      model: String!
       HRN: String!
       HIN: String!
       contactNumber: String!
@@ -66,7 +66,7 @@ type Mutation {
       POCName: String!
       POCEmail: String!
       POCPhoneNumber: String!
-      Notes: String!
+      notes: String!
     ): Ship
     addPdf(fileName: String!, path: String!): Pdf
     removeUser(userId: ID!): User
@@ -80,8 +80,8 @@ type Mutation {
     ): User
     updateShip(
       shipId: ID
-      Ship: String
-      Model: String
+      shipName: String
+      model: String
       HRN: String
       HIN: String
       contactNumber: String
@@ -94,8 +94,13 @@ type Mutation {
       POCName: String
       POCEmail: String
       POCPhoneNumber: String
-      Notes: String
+      notes: String
     ): Ship
+    updatePdf(
+      pdfId: ID
+      fileName: String
+      path: String
+    ): Pdf
     removeShip(shipId: ID!): Ship
     removePdf(pdfId: ID!): Pdf
 }  

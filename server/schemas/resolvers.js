@@ -16,22 +16,22 @@ const resolvers = {
       }
     },
     ships: async () => {
-      return await Ship.find({}).populate('users');
+      return await Ship.find({}).populate('user');
     },
     ship: async(parent, {shipId}) => {
       try {
-        return await Ship.findById(shipId).populate('users');
+        return await Ship.findById(shipId).populate('user');
       } catch (error) {
         console.error('Error fetching ship:', error);
         throw error;
       }
     },
     pdfs: async () => {
-      return await Pdf.find({}).populate('users');
+      return await Pdf.find({}).populate('user');
     },
     pdf: async(parent, {pdfId}) => {
       try {
-        return await Pdf.findById(pdfId).populate('users');
+        return await Pdf.findById(pdfId).populate('user');
       } catch (error) {
         console.error('Error fetching pdf:', error);
         throw error;
@@ -61,9 +61,9 @@ const resolvers = {
       return { token, user };
     },
     
-    addShip: async (parent, {Ship, Model, HRN, HIN, ContactNumber, SponsonSerialNumber, SRBSerialNumber, fuelTankSerialNumber, ZAPR356C2BVMXHookSerialNumber, engineMakeModel, engineSerialNumber, POCName, POCEmail, POCPhoneNumber}) => {
+    addShip: async (parent, {shipName, model, HRN, HIN, contactNumber, sponsonSerialNumber, SRBSerialNumber, fuelTankSerialNumber, ZAPR356C2BVMXHookSerialNumber, engineMakeModel, engineSerialNumber, POCName, POCEmail, POCPhoneNumber}) => {
       try {
-        return await Ship.create({Ship, Model, HRN, HIN, ContactNumber, SponsonSerialNumber, SRBSerialNumber, fuelTankSerialNumber, ZAPR356C2BVMXHookSerialNumber, engineMakeModel, engineSerialNumber, POCName, POCEmail, POCPhoneNumber});
+        return await Ship.create({shipName, model, HRN, HIN, contactNumber, sponsonSerialNumber, SRBSerialNumber, fuelTankSerialNumber, ZAPR356C2BVMXHookSerialNumber, engineMakeModel, engineSerialNumber, POCName, POCEmail, POCPhoneNumber});
       } catch (error) {
         console.error('Error adding ship:', error);
         throw error;
@@ -97,16 +97,16 @@ const resolvers = {
         throw new Error('Failed to update user information');
       }
     },
-    updateShip: async (_, {shipId, Ship, Model, HRN, HIN, ContactNumber, SponsonSerialNumber, SRBSerialNumber, fuelTankSerialNumber, ZAPR356C2BVMXHookSerialNumber, engineMakeModel, engineSerialNumber, POCName, POCEmail, POCPhoneNumber }) => {
+    updateShip: async (_, {shipId, shipName, model, HRN, HIN, contactNumber, sponsonSerialNumber, SRBSerialNumber, fuelTankSerialNumber, ZAPR356C2BVMXHookSerialNumber, engineMakeModel, engineSerialNumber, POCName, POCEmail, POCPhoneNumber }) => {
       try {
         const ship = await Ship.findById(shipId);
 
-        if (Ship) ship.Ship = Ship;
-        if (Model) ship.Model = Model;
+        if (shipName) ship.shipName = shipName;
+        if (model) ship.model = model;
         if (HRN) ship.HRN = HRN;
         if (HIN) ship.HIN = HIN;
-        if (ContactNumber) ship.ContactNumber = ContactNumber;
-        if (SponsonSerialNumber) ship.SponsonSerialNumber = SponsonSerialNumber;
+        if (contactNumber) ship.contactNumber = contactNumber;
+        if (sponsonSerialNumber) ship.sponsonSerialNumber = sponsonSerialNumber;
         if (SRBSerialNumber) ship.SRBSerialNumber = SRBSerialNumber;
         if (fuelTankSerialNumber) ship.fuelTankSerialNumber = fuelTankSerialNumber;
         if (ZAPR356C2BVMXHookSerialNumber) ship.ZAPR356C2BVMXHookSerialNumber = ZAPR356C2BVMXHookSerialNumber;
@@ -121,6 +121,19 @@ const resolvers = {
         return ship;
       } catch (error) {
         throw new Error ('Failed to update ship information');
+      }
+    },
+    updatePdf: async (_, {pdfId, fileName, path}) => {
+      try{
+        const pdf = await Pdf.findById(pdfId);
+
+        if (fileName) pdf.fileName = fileName;
+        if (path) pdf.path = path;
+
+        await pdf.save();
+        return pdf;
+      } catch (error) {
+        throw new Error ('Failed to update pdf information');
       }
     },
     removeShip: async (parent, { shipId }) => {
