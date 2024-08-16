@@ -27,11 +27,6 @@ export default function Sign() {
           [name]: value,
         });
       };
-
-      const handleCursor = () => {
-        alert('Please provide input!');
-    };
-
     const handleDropDownChange = (e) => {
         setFormState({
           ...formState,
@@ -47,6 +42,7 @@ export default function Sign() {
                 variables: { ...formState},
             });
             Auth.login(data.addUser.token);
+            setLoggedIn(true);
         } catch (e) {
             console.log(e);
         }
@@ -66,7 +62,6 @@ export default function Sign() {
                 value={formState.firstName}
                 name="firstName"
                 onChange={handleInputChange}
-                onBlur={handleCursor}
                 type="text"
                 placeholder="First Name"
               />
@@ -80,7 +75,6 @@ export default function Sign() {
                 value={formState.lastName}
                 name="lastName"
                 onChange={handleInputChange}
-                onBlur={handleCursor}
                 type="text"
                 placeholder="Last Name"
               />
@@ -94,7 +88,6 @@ export default function Sign() {
                 value={formState.email}
                 name="email"
                 onChange={handleInputChange}
-                onBlur={handleCursor}
                 type="text"
                 placeholder="Email"
               />
@@ -109,7 +102,6 @@ export default function Sign() {
                 value={formState.password}
                 name="password"
                 onChange={handleInputChange}
-                onBlur={handleCursor}
                 type="password"
                 placeholder="Password"
               />

@@ -19,10 +19,6 @@ import '../styles/style.css';
         [name]: value,
       });
     };
-
-    const handleCursor = () => {
-        alert('Please provide input!');
-    };
   
     const handleFormSubmit = async (e) => {
       e.preventDefault();
@@ -63,7 +59,6 @@ import '../styles/style.css';
                 value={formState.email}
                 name="email"
                 onChange={handleInputChange}
-                onBlur={handleCursor}
                 type="text"
                 placeholder='Email'
               />
@@ -75,7 +70,6 @@ import '../styles/style.css';
                 value={formState.password}
                 name="password"
                 onChange={handleInputChange}
-                onBlur={handleCursor}
                 type="password"
                 placeholder='Password'
               />
