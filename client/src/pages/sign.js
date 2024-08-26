@@ -55,6 +55,7 @@ export default function Sign() {
       ) : (
         <>
           <h2 className="header p-4">Please Sign Up!</h2>
+          <card id='form'>
           <form className="form w-50 p-2" onSubmit={handleFormSubmit}>
             <div className="form-floating">
               <input
@@ -125,12 +126,13 @@ export default function Sign() {
               </label>
             </div>
 
-            <button className='btn btn-warning mx-auto' type='submit'>Submit</button>
+            <button id='submit-btn' className='btn mx-auto' type='submit'>Submit</button>
           </form>
+          </card>
 
-          <p className="m-5">
+          <p id='login-link' className="m-5">
             Already have an account?{" "}
-            <Link id="login-btn" className="link link-warning" to="/login">
+            <Link id="login-btn" className="link" to="/login">
               Login
             </Link>
           </p>

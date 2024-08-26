@@ -52,6 +52,7 @@ import '../styles/style.css';
         <>
           {error && <p style={{ color: 'red' }}>{error.message}</p>}
           <h2 className='header'>Login</h2>
+          <card id='log-form'>
           <form className='form w-25 p-2' onSubmit={handleFormSubmit}>
             <div className='form-floating'>
               <input
@@ -75,10 +76,11 @@ import '../styles/style.css';
               />
               <label htmlFor='password' className='form-label'>Password</label>
             </div>
-            <button id="submit" className='btn btn-warning' type="submit">
+            <button id="log-submit" className='btn btn-warning mx-auto' type="submit">
               Submit
             </button>
           </form>
+          </card>
         </>
       )}
     </div>
