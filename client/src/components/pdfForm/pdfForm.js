@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { useMutation } from '@apollo/client';
 import { ADD_PDF } from '../../utils/mutations'; 
+import '../../styles/style.css';
 
 export default function AddFile() {
   const [selectedFile, setSelectedFile] = useState(null);
