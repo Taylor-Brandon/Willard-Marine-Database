@@ -44,7 +44,7 @@ export default function Sign() {
             Auth.login(data.addUser.token);
             setLoggedIn(true);
         } catch (e) {
-            console.log(e);
+            console.error(e);
         }
     };
 
@@ -125,7 +125,6 @@ export default function Sign() {
                 Admin
               </label>
             </div>
-
             <button id='submit-btn' className='btn mx-auto' type='submit'>Submit</button>
           </form>
           </card>
