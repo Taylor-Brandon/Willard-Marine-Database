@@ -38,7 +38,7 @@ export default function AddFile() {
     <div className="file-upload">
       <div {...getRootProps()} className="dropzone">
         <input {...getInputProps()} />
-        <p>Drag 'n' drop a file here, or click to select one</p>
+        <p>Drag and Drop a file here or click to select a file!</p>
       </div>
       {selectedFile && (
         <div>
