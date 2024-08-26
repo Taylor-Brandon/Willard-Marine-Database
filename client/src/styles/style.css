@@ -39,5 +39,17 @@ h2{
     width: 50%;
     background-color: rgb(229, 237, 248);
 }
-
+#addUser-form{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+#addUser-btn{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: rgb(229, 237, 248);
+}
 

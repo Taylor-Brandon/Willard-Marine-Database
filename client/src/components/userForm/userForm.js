@@ -3,8 +3,9 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
+import "../../styles/style.css";
 
-const AddUser = () => {
+export default function AddUser() {
     const [formState, setFormState] = useState({
         firstName: '',
         lastName: '',
@@ -38,10 +39,11 @@ const AddUser = () => {
         e.preventDefault();
     
         try{
-          const { data } = await addUser({
+          const {data} = await addUser({
             variables: { ...formState },
           });
           Auth.login(data.addUser.token);
+          setLoggedIn(true);
         } catch (e) {
           console.error(e);
         }
@@ -53,6 +55,8 @@ const AddUser = () => {
         <Navigate to="/userList" />
       ) : (
         <>
+        <h2>Add a User</h2>
+        <card id='addUser-form'>
         <form className="form w-50 p-2" onSubmit={handleFormSubmit}>
             <div className="form-floating">
               <input
@@ -122,14 +126,11 @@ const AddUser = () => {
                 Admin
               </label>
             </div>
-            <button className="btn btn-warning mx-auto" type="submit">Submit</button>
-
-            
+            <button id="addUser-btn" className="btn mx-auto" type="submit">Submit</button>
           </form>
+          </card>
           </>
       )}
     </div>
   );
 }
-
-export default AddUser;
