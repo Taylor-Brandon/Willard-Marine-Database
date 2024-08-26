@@ -85,11 +85,9 @@ export const ADD_SHIP = gql`
 export const ADD_PDF = gql`
   mutation addPdf($fileName: String!, $path: String!) {
     addPdf(fileName: $fileName, path: $path) {
-      pdf {
         _id
         fileName
         path
-      }
     }
   }
 `;
