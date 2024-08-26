@@ -13,6 +13,7 @@ import Sign from './pages/sign';
 import Home from './pages/home';
 import Log from './pages/log';
 import AddUser from './components/userForm/userForm';
+import AddShip from './components/shipForm/shipForm';
 
 const httpLink = createHttpLink({
     uri: '/graphql',
@@ -43,6 +44,7 @@ function App() {
           <Route path="/login" element={<Log />} />
           <Route path="/home" element={<Home />} />
           <Route path="/addUser" element={<AddUser />} />
+          <Route path="/addShip" element={<AddShip />} />
           </Routes>
       </Router>
     </ApolloProvider>
