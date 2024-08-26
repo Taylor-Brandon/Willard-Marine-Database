@@ -52,7 +52,7 @@ export default function AddShip() {
 
         return(
             <card id='ship-form'>
-                  <form className="form w-50 p-2" onSubmit={handleFormSubmit}>
+                  <form className="form w-25" onSubmit={handleFormSubmit}>
                     <div className="input-fields">
                 <div className="form-floating">
                   <input
@@ -266,7 +266,7 @@ export default function AddShip() {
                   </div>
                   </div>
 
-                  <button className="btn btn-warning mx-auto" type="submit">Submit</button>
+                  <button id="shipForm-btn" className="btn mx-auto" type="submit">Submit</button>
                   </form>
                   </card>
         )
