@@ -35,17 +35,21 @@ export default function AddFile() {
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
   return (
+    <div className='container'>
+      <form id='file-form'>
     <div className="file-upload">
-      <div {...getRootProps()} className="dropzone">
-        <input {...getInputProps()} />
-        <p>Drag and Drop a file here or click to select a file!</p>
+      <div {...getRootProps()} className="drop-file">
+        <input {...getInputProps()} className='form-control' />
+        <p id="file-directions">Drag and Drop a file here or click to select a file!</p>
       </div>
       {selectedFile && (
-        <div>
-          <p>Selected file: {selectedFile.name}</p>
-          <button onClick={handleSubmit}>Upload</button>
+        <div id='add-file'>
+          <p id='p-element'>Selected file: {selectedFile.name}</p>
+          <button id='upload-btn' onClick={handleSubmit}>Upload</button>
         </div>
       )}
+    </div>
+    </form>
     </div>
   );
 };
