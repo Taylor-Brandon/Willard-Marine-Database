@@ -29,25 +29,56 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_SHIP = gql`
-  mutation addShip($shipName: String!, $model: String!, $HRN: String, $HIN: String!, $contactNumber: String!, $sponsonSerialNumber: String!, $SRBSerialNumber: String!, $fuelTankSerialNumber: String!, $ZAPR356C2BVMXHookSerialNumber: String!, $engineMakeModel: String!, $engineSerialNumber: String!, $POCName: String, $POCEmail: String, $POCPhoneNumber: String, $notes: String) {
-    addShip(shipName: $shipName, model: $model, HRN: $HRN, HIN: $HIN, contactNumber: $contactNumber, sponsonSerialNumber: $sponsonSerialNumber, SRBSerialNumber: $SRBSerialNumber, fuelTankSerialNumber: $fuelTankSerialNumber, ZAPR356C2BVMXHookSerialNumber: $ZAPR356C2BVMXHookSerialNumber, engineMakeModel: $engineMakeModel, engineSerialNumber: $engineSerialNumber, POCName: $POCName, POCEmail: $POCEmail, POCPhoneNumber: $POCPhoneNumber, notes: $notes) {
-      ship {
-        _id
-        shipName
-        model
-        HRN
-        HIN
-        contactNumber
-        sponsonSerialNumber
-        SRBSerialNumber
-        fuelTankSerialNumber
-        ZAPR356C2BVMXHookSerialNumber
-        engineMakeModel
-        engineSerialNumber
-        POCName
-        POCEmail
-        POCPhoneNumber
-      }
+  mutation addShip(
+    $shipName: String!,
+    $model: String!,
+    $HRN: String!,
+    $HIN: String!,
+    $contactNumber: String!,
+    $sponsonSerialNumber: String!,
+    $SRBSerialNumber: String!,
+    $fuelTankSerialNumber: String!,
+    $ZAPR356C2BVMXHookSerialNumber: String!,
+    $engineMakeModel: String!,
+    $engineSerialNumber: String!,
+    $POCName: String!,
+    $POCEmail: String!,
+    $POCPhoneNumber: String!,
+    $notes: String!
+  ) {
+    addShip(
+      shipName: $shipName,
+      model: $model,
+      HRN: $HRN,
+      HIN: $HIN,
+      contactNumber: $contactNumber,
+      sponsonSerialNumber: $sponsonSerialNumber,
+      SRBSerialNumber: $SRBSerialNumber,
+      fuelTankSerialNumber: $fuelTankSerialNumber,
+      ZAPR356C2BVMXHookSerialNumber: $ZAPR356C2BVMXHookSerialNumber,
+      engineMakeModel: $engineMakeModel,
+      engineSerialNumber: $engineSerialNumber,
+      POCName: $POCName,
+      POCEmail: $POCEmail,
+      POCPhoneNumber: $POCPhoneNumber,
+      notes: $notes
+    ) {
+      _id
+      shipName
+      model
+      HRN
+      HIN
+      contactNumber
+      sponsonSerialNumber
+      SRBSerialNumber
+      fuelTankSerialNumber
+      ZAPR356C2BVMXHookSerialNumber
+      engineMakeModel
+      engineSerialNumber
+      POCName
+      POCEmail
+      POCPhoneNumber
+      notes
     }
   }
 `;
