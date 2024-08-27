@@ -50,7 +50,7 @@ function App() {
           <Route path="/addShip" element={<AddShip />} />
           <Route path="/addFile" element={<AddFile />} />
           <Route path="/editUser" element={<EditUser />} />
-          <Route path="/changeUser" element={<ChangeUser />} />
+          <Route path="/user/:userId" element={<ChangeUser />} />
           </Routes>
       </Router>
     </ApolloProvider>
