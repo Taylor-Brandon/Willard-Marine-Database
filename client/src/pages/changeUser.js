@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_USERS } from "../utils/queries";
-import { REMOVE_USER, UPDATE_USER } from '../utils/mutations';
+import { UPDATE_USER } from '../utils/mutations';
 import '../styles/style.css';
 
 export default function ChangeUser() {
@@ -19,15 +19,6 @@ export default function ChangeUser() {
             window.alert(error.message)
         }
     });
-    const [removeUser] = useMutation(REMOVE_USER, {
-        onCompleted: (data) => {
-            window.alert("User Removed Successfully");
-        },
-        onError: (error) => {
-            window.alert(error.message)
-        }
-    });
-
     const [user, setUser] = useState(null);
     const [formData, setFormData] = useState({
         firstName: '',
@@ -63,14 +54,6 @@ export default function ChangeUser() {
         updateUser({ variables: { userId, ...formData } });
     };
 
-    const handleRemoveUser = () => {
-       
-        if (window.confirm("Are you sure you want to remove this user?")) {
-            
-            removeUser({ variables: { userId } });
-        }
-    };
-
     return (
         <div>
             {user && (
@@ -79,7 +62,6 @@ export default function ChangeUser() {
                     <p>Email: {user.email}</p>
                     <p>Admin: {user.admin.toString()}</p>
                     <p>ID: {user._id}</p>
-                    <button onClick={handleRemoveUser}>Remove User</button>
                 </div>
             )}
 
