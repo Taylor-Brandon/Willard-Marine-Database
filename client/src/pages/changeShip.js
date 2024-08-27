@@ -28,8 +28,8 @@ export default function ChangeShip() {
     });
     const [ship, setShip] = useState(null);
     const [formData, setFormData] = useState({
-        Ship: '',
-        Model: '',
+        shipName: '',
+        model: '',
         HRN: '',
         HIN: '',
         contactNumber: '',
@@ -42,7 +42,7 @@ export default function ChangeShip() {
         POCName: '',
         POCEmail: '',
         POCPhoneNumber: '',
-        Notes: '',
+        notes: '',
     });
 
     useEffect(() => {
@@ -51,8 +51,8 @@ export default function ChangeShip() {
             setShip(foundShip);
             if (foundShip) {
                 setFormData({
-                    Ship: foundShip.Ship,
-                    Model: foundShip.Model,
+                    shipName: foundShip.Ship,
+                    model: foundShip.Model,
                     HRN: foundShip.HRN,
                     HIN: foundShip.HIN,
                     contactNumber: foundShip.contactNumber,
@@ -65,7 +65,7 @@ export default function ChangeShip() {
                     POCName: foundShip.POCName,
                     POCEmail: foundShip.POCEmail,
                     POCPhoneNumber: foundShip.POCPhoneNumber,
-                    Notes: foundShip.Notes,
+                    notes: foundShip.Notes,
                 });
             }
         }
@@ -93,7 +93,7 @@ export default function ChangeShip() {
         <div>
             {ship && (
                 <div>
-                    <h1>{ship.Ship} {ship.Model}</h1>
+                    <h1>{ship.shipName} {ship.model}</h1>
                     <p>HIN: {ship.HIN}</p>
                     <p>HRN: {ship.HRN}</p>
                     <p>Contact Number: {ship.contactNumber}</p>
@@ -112,11 +112,11 @@ export default function ChangeShip() {
             )}
             <form onSubmit={handleSubmit}>
                 <label>
-                    Ship
+                    Ship Name
                     <input
                         type="text"
-                        name="Ship"
-                        value={formData.Ship}
+                        name="shipName"
+                        value={formData.shipName}
                         onChange={handleChange}
                     />
                     </label>
@@ -125,8 +125,8 @@ export default function ChangeShip() {
                     Model
                     <input
                         type="text"
-                        name="Model"
-                        value={formData.Model}
+                        name="model"
+                        value={formData.model}
                         onChange={handleChange}
                     />
                 </label>

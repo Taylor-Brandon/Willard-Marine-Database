@@ -23,11 +23,11 @@ export default function EditShip() {
     <div key={ship._id} className="col-12 col-xl-6">
         <div className="card mb-3">
             <h4 className="card-header p-2 m-0">
-                {ship.Ship} {ship.Model} <br />
+                {ship.shipName} {ship.model} <br />
                 <span className="text-black" style={{ fontSize: '1rem'}}>
                     <p>More data</p>
                 </span>
-                <Link to={`/${ship._id}`}>Edit Ship</Link>
+                <Link to={`/ship/${ship._id}`}>Edit Ship</Link>
             </h4>
         </div>
     </div>
@@ -36,8 +36,7 @@ export default function EditShip() {
 
 
                             </div>
-                            <Link to="/userList">User List</Link>
-                            <Link to="profile">profile</Link>
+                            <Link to="/home">Home</Link>
                         </div>
                     )}
                 </div>

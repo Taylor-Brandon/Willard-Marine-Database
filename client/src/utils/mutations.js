@@ -117,17 +117,17 @@ export const UPDATE_USER = gql`
 export const UPDATE_SHIP = gql`
   mutation updateShip(
     $shipId: ID!
-    $shipName: String!
-    $model: String!
+    $shipName: String
+    $model: String
     $HRN: String
-    $HIN: String!
-    $contactNumber: String!
-    $sponsonSerialNumber: String!
-    $SRBSerialNumber: String!
-    $fuelTankSerialNumber: String!
-    $ZAPR356C2BVMXHookSerialNumber: String!
-    $engineMakeModel: String!
-    $engineSerialNumber: String!
+    $HIN: String
+    $contactNumber: String
+    $sponsonSerialNumber: String
+    $SRBSerialNumber: String
+    $fuelTankSerialNumber: String
+    $ZAPR356C2BVMXHookSerialNumber: String
+    $engineMakeModel: String
+    $engineSerialNumber: String
     $POCName: String
     $POCEmail: String
     $POCPhoneNumber: String
