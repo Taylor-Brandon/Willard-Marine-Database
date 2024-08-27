@@ -4,7 +4,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_SHIPS } from "../../utils/queries";
 import '../../styles/style.css';
 
-export default function EditSolas() {
+export default function EditShip() {
     const { loading, data, error } = useQuery(QUERY_SHIPS);
     const ships = data?.ships || [];
 

@@ -17,6 +17,7 @@ import AddShip from './components/shipForm/shipForm';
 import AddFile from './components/pdfForm/pdfForm';
 import EditUser from './components/editUser/editUser';
 import ChangeUser from './pages/changeUser';
+import EditShip from './components/editShip/editShip';
 
 const httpLink = createHttpLink({
     uri: '/graphql',
@@ -51,6 +52,7 @@ function App() {
           <Route path="/addFile" element={<AddFile />} />
           <Route path="/editUser" element={<EditUser />} />
           <Route path="/user/:userId" element={<ChangeUser />} />
+          <Route path="/editShip" element={<EditShip />} />
           </Routes>
       </Router>
     </ApolloProvider>
