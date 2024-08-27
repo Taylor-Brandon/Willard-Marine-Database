@@ -172,12 +172,10 @@ export const UPDATE_SHIP = gql`
 export const REMOVE_SHIP = gql`
   mutation removeShip($shipId: ID!) {
     removeShip(shipId: $shipId) {
-      ship {
         _id
         shipName
         model
       }
-    }
   }
 `;
 

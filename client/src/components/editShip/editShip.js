@@ -47,7 +47,7 @@ export default function EditShip() {
                 <Link to={`/ship/${ship._id}`}>Edit Ship</Link>
                 <button 
                 onClick={() => handleRemoveShip(ship._id)} 
-                lassName="btn btn-danger ml-3">
+                className="btn btn-danger ml-3">
                 <i className="bi bi-x"></i>
                 </button>
             </h4>
