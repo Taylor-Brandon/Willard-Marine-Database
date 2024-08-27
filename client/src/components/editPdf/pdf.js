@@ -4,3 +4,59 @@ import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_PDFS } from "../../utils/queries";
 import { REMOVE_PDF } from "../../utils/mutations";
 import '../../styles/style.css';
+
+export default function EditPdf() {
+    const { loading, error, data } = useQuery(QUERY_PDFS);
+    const pdfs = data?.pdfs || [];
+
+    const [removePdf] = useMutation(REMOVE_PDF, {
+        onCompleted: () => {
+            window.alert("Pdf file Removed Successfully");
+        },
+        onError: (error) => {
+            window.alert(error.message);
+        },
+        refetchQueries: [{ query: QUERY_PDFS }]
+    });
+
+    const handleRemovePdf = (pdfId) => {
+        if (window.confirm("Are you sure you want to remove this file?")) {
+            removePdf({ variables: { pdfId } });
+        }
+    };
+
+    if (error) return <h1>Error: {error.message}</h1>;
+
+    return (
+        <main>
+            <div className="flex-row justify-center">
+                <div className="col-12 col-md-10 my-3">
+                    {loading ? (
+                        <div>Loading. . .</div>
+                    ) : (
+                        <div>
+                            <h3 className="text-primary">Here is the current roster of pdf files</h3>
+                            <div className="flex-row justify-space-between my-4">
+                                {pdfs.map((pdf) => (
+                                    <div key={pdf._id} className="col-12 col-xl-6">
+                                        <div className="card mb-3">
+                                            <h4 className="card-header p-2 m-0">
+                                                {pdf.fileName} {pdf.path} <br />
+                                                <button 
+                                                    onClick={() => handleRemovePdf(pdf._id)} 
+                                                    className="btn btn-danger ml-3">
+                                                    <i className="bi bi-x"></i>
+                                                </button>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <Link to="/home">Home</Link>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </main>
+    );
+};
