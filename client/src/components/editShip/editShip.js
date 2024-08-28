@@ -34,23 +34,30 @@ export default function EditShip() {
                         <div>Loading. . .</div>
                     ) : (
                         <div>
-                            <h3 className="text-primary">Here is the current roster of ships</h3>
-                            <div className="flex-row justify-space-betweeen my-4">
+                            <Link id="home-link" to="/home"><i className="bi bi-house"></i></Link>
+                            <div id="ship-list" className="flex-row justify-space-betweeen my-4">
                             {ships.map((ship) => (
-    <div key={ship._id} className="col-12 col-xl-6">
-        <div className="card mb-3">
-            <h4 className="card-header p-2 m-0">
-                {ship.shipName} {ship.model} <br />
-                <span className="text-black" style={{ fontSize: '1rem'}}>
-                    <p>More data</p>
-                </span>
-                <Link to={`/ship/${ship._id}`}>Edit Ship</Link>
-                <button 
+                                <div key={ship._id} className="col-12 col-xl-6 ms-2">
+                                    <div className="card mb-3">
+                                    <nav className="card-heading">
+                                    <h4 id="shipCard-header" className="card-header p-2 m-0">
+                {ship.shipName}<br />
+                </h4>
+                <div className="ship-links">
+                <Link id="editShip-link" to={`/ship/${ship._id}`}><i className="bi bi-pen"></i></Link>
+                <button
+                id="removeShip-btn" 
                 onClick={() => handleRemoveShip(ship._id)} 
-                className="btn btn-danger ml-3">
+                className="btn ml-3">
                 <i className="bi bi-x"></i>
                 </button>
-            </h4>
+                </div>
+                </nav>
+                <span className="text-black" style={{ fontSize: '1rem'}}>
+                    <div className="ship-data">
+                    <p className="ms-2">{ship.model}</p>
+                    </div>
+                </span>
         </div>
     </div>
 ))}

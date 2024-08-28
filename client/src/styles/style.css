@@ -90,3 +90,195 @@ h2{
     background-color: rgb(229, 237, 248);
     border: 2px solid rgb(229, 237, 248);
 }
+#editUser-heading{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+}
+#user-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 100px;
+}
+#admin-card{
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: grey;
+
+}
+#card-header{
+    background-color: white;
+    border-bottom: 0px;
+    margin-left: 70px;
+    margin-top: -55px;
+}
+#card-text{
+    margin-left: 85px;
+}
+#email-text{
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+#admin-text{
+    margin-bottom: 10px;
+}
+#edit-list{
+    font-size: 30px;
+    color: black;
+}
+#link-box{
+    display: flex;
+    justify-content: end;
+    margin-top: -55px;
+}
+#home-link{
+    display: flex;
+    justify-content: end;
+    margin-right: -190px;
+    font-size: 30px;
+    color: white;
+}
+#delete-btn{
+    color: red;
+    font-size: 30px;
+}
+#changeUserHome-link{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+}
+#user-name{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#info-section{
+    justify-content: start;
+    margin-top: 60px;
+    margin-left: 400px;
+    height: 400px;
+    display: flex;
+}
+#info-card{
+    width: 25%;
+    border-radius: 20px;
+}
+#userForm-section{
+    display: flex;
+    justify-content: end;
+    margin-top: -400px;
+    height: 400px;
+    margin-right: 400px;
+}
+#userForm-card{
+    width: 25%;
+    display: flex;
+    border-radius: 20px;
+}
+#editUser-btn{
+    margin-top: 20px;
+   margin-left: 100px;
+    background-color: rgb(229, 237, 248);
+}
+#ship-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 100px;
+}
+#shipCard-header{
+    background-color: white;
+    border-bottom: 0px;
+    margin-left: 70px;
+    margin-top: -55px;
+}
+.ship-links{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    margin-top: -40px;
+}
+#removeShip-btn{
+    color: red;
+    margin-top: -15px;
+    font-size: 30px;
+}
+#editShip-link{
+    color: black;
+    font-size: 20px;
+}
+#changeShipHome-link{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+}
+#shipInfo-section{
+    justify-content: start;
+    margin-top: 60px;
+    margin-left: 400px;
+    height: 700px;
+    display: flex;
+}
+#shipInfo-card{
+    width: 25%;
+    border-radius: 20px;
+}
+#ship-name{
+    text-align: center;
+}
+#ship-text{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#editShip-btn{
+    margin-top: 20px;
+    margin-left: 100px;
+     background-color: rgb(229, 237, 248);
+}
+#shipForm-section{
+    display: flex;
+    justify-content: end;
+    height: 1050px;
+    margin-top: -700px;
+    margin-right: 400px;
+}
+#shipForm-card{
+    width: 25%;
+    display: flex;
+    border-radius: 20px;
+}
+#pdfHome-link{
+    display: flex;
+    justify-content: end;
+    margin-right: -190px;
+    font-size: 30px;
+    color: white;
+}
+#file-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 100px;
+}
+#pdfCard-header{
+    background-color: white;
+    border-bottom: 0px;
+    margin-left: 70px;
+    margin-top: -55px;
+}
+#pdfLink-box{
+    display: flex;
+    justify-content: end;
+    margin-top: -55px;
+}
+#pdfDelete-btn{
+    color: red;
+    font-size: 30px;
+}

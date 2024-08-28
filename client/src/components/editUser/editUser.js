@@ -35,29 +35,40 @@ const EditUser = () => {
                         <div>Loading. . .</div>
                     ) : (
                         <div>
-                            <h3 className="text-primary">Here is the current roster of profiles</h3>
-                            <div className="flex-row justify-space-between my-4">
+                             <Link id="home-link" to="/home"><i className="bi bi-house"></i></Link>
+                            <div id="user-list" className="flex-row justify-space-between my-4">
                                 {users.map((user) => (
-                                    <div key={user._id} className="col-12 col-xl-6">
+                                    <div key={user._id} className="col-12 col-xl-6 ms-2">
                                         <div className="card mb-3">
-                                            <h4 className="card-header p-2 m-0">
+                                            <nav className="card-heading">
+                                            <div id="admin-card"></div>
+                                            <h4 id="card-header" className="card-header">
                                                 {user.firstName} {user.lastName} <br />
-                                                <span className="text-black" style={{ fontSize: '1rem' }}>
-                                                    Admin: {user.admin.toString()}, 
-                                                    Email: {user.email}
-                                                </span>
-                                                <Link to={`/user/${user._id}`}>Edit User</Link>
+                                                </h4>
+                                                <div id="link-box">
+                                                <div className="links">
+                                                <Link id='edit-link' to={`/user/${user._id}`}><i className="bi bi-pen"></i></Link>
                                                 <button 
                                                     onClick={() => handleRemoveUser(user._id)} 
-                                                    className="btn btn-danger ml-3">
+                                                    id='delete-btn'
+                                                    className="btn ml-3">
                                                     <i className="bi bi-x"></i>
                                                 </button>
-                                            </h4>
+                                                </div>
+                                                </div>
+                                                </nav>
+                                                <span id="card-text" className="text-black" style={{ fontSize: '1rem' }}>
+                                                <div id="email-text">
+                                                    Email: {user.email}
+                                                    </div>
+                                                    <div id="admin-text">
+                                                    Admin: {user.admin.toString()}
+                                                    </div>
+                                                </span>
                                         </div>
                                     </div>
                                 ))}
                             </div>
-                            <Link to="/home">Home</Link>
                         </div>
                     )}
                 </div>

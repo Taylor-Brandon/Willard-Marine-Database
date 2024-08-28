@@ -35,24 +35,28 @@ export default function EditPdf() {
                         <div>Loading. . .</div>
                     ) : (
                         <div>
-                            <h3 className="text-primary">Here is the current roster of pdf files</h3>
-                            <div className="flex-row justify-space-between my-4">
+                            <Link id="pdfHome-link" to="/home"><i className="bi bi-house"></i></Link>
+                            <div id="file-list" className="flex-row justify-space-between my-4">
                                 {pdfs.map((pdf) => (
                                     <div key={pdf._id} className="col-12 col-xl-6">
-                                        <div className="card mb-3">
-                                            <h4 className="card-header p-2 m-0">
+                                        <div className="card ms-3 mb-3">
+                                        <nav className="card-heading">
+                                            <h4 id="pdfCard-header" className="card-header p-2 m-0">
                                                 {pdf.fileName} {pdf.path} <br />
+                                                </h4>
+                                                </nav>
+                                                <div id="pdfLink-box">
                                                 <button 
+                                                    id="pdfDelete-btn"
                                                     onClick={() => handleRemovePdf(pdf._id)} 
-                                                    className="btn btn-danger ml-3">
+                                                    className="btn ml-3">
                                                     <i className="bi bi-x"></i>
                                                 </button>
-                                            </h4>
+                                        </div>
                                         </div>
                                     </div>
                                 ))}
                             </div>
-                            <Link to="/home">Home</Link>
                         </div>
                     )}
                 </div>
