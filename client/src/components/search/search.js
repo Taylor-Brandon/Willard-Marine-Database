@@ -46,6 +46,7 @@ export default function Search() {
 
   return (
     <section>
+      <div id='shipSearch-input'>
       <form className="form w-50" onSubmit={handleFormSubmit}>
         <div className="form-control p-3 mb-2">
           <input
@@ -57,19 +58,20 @@ export default function Search() {
           />
         </div>
       </form>
-      <button className="btn btn-outline-warning" type="submit">Search</button>
+      <button id='shipSearch-btn' className="btn" type="submit"><i className="bi bi-search"></i></button>
+      </div>
       <section>
         <h2 className="bs-info-text-emphasis"></h2>
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error.message}</p>}
         {filteredShips.length === 0 ? (
-          <p>No results found</p>
+          <p id='noShip-result'>No results found</p>
         ) : (
-          <ul>
+          <ul id='ship-results'>
             {filteredShips.map((ship) => (
               <li key={ship._id}>
                 {ship.shipName} - {ship.model}
-                <Link to={`/ship/${ship._id}`}>View Details</Link>
+                <Link id='ship-details' to={`/ship/${ship._id}`}><i className="bi bi-clipboard-check-fill"></i></Link>
               </li>
             ))}
           </ul>

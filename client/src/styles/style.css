@@ -293,12 +293,37 @@ h2{
 }
 #noUser-result{
     text-align: center;
+    font-size: 25px;
 }
 #user-results{
     text-align: center;
+    font-size: 25px;
 }
 #user-details{
     color: rgb(229, 237, 248);
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 25px;
+}
+#shipSearch-input{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#shipSearch-btn{
+    color: rgb(229, 237, 248);
+    font-size: 30px;
+}
+#noShip-result{
+    text-align: center;
+    font-size: 25px;
+}
+#ship-results{
+    text-align: center;
+    list-style: none;
+    font-size: 25px;
+}
+#ship-details{
+    color: rgb(229, 237, 248);
+    margin-left: 10px;
+    font-size: 25px;
 }
