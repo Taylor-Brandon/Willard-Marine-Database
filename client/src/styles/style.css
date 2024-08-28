@@ -327,3 +327,25 @@ h2{
     margin-left: 10px;
     font-size: 25px;
 }
+#pdfSearch-input{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#pdfSearch-btn{
+    color: rgb(229, 237, 248);
+    font-size: 30px;
+}
+#noPdf-result{
+    text-align: center;
+    font-size: 25px;
+}
+#pdf-results{
+    text-align: center;
+    list-style: none;
+}
+#pdf-details{
+    color: rgb(229, 237, 248);
+    margin-left: 10px;
+    font-size: 25px;
+}
