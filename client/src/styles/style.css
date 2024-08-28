@@ -254,3 +254,31 @@ h2{
     display: flex;
     border-radius: 20px;
 }
+#pdfHome-link{
+    display: flex;
+    justify-content: end;
+    margin-right: -190px;
+    font-size: 30px;
+    color: white;
+}
+#file-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 100px;
+}
+#pdfCard-header{
+    background-color: white;
+    border-bottom: 0px;
+    margin-left: 70px;
+    margin-top: -55px;
+}
+#pdfLink-box{
+    display: flex;
+    justify-content: end;
+    margin-top: -55px;
+}
+#pdfDelete-btn{
+    color: red;
+    font-size: 30px;
+}
