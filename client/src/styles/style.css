@@ -146,3 +146,42 @@ h2{
     color: red;
     font-size: 30px;
 }
+#changeUserHome-link{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+}
+#user-name{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#info-section{
+    justify-content: start;
+    margin-top: 60px;
+    margin-left: 400px;
+    height: 400px;
+    display: flex;
+}
+#info-card{
+    width: 25%;
+    border-radius: 20px;
+}
+#userForm-section{
+    display: flex;
+    justify-content: end;
+    margin-top: -400px;
+    height: 400px;
+    margin-right: 400px;
+}
+#userForm-card{
+    width: 25%;
+    display: flex;
+    border-radius: 20px;
+}
+#editUser-btn{
+    margin-top: 20px;
+   margin-left: 100px;
+    background-color: rgb(229, 237, 248);
+}
