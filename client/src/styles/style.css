@@ -212,3 +212,45 @@ h2{
     color: black;
     font-size: 20px;
 }
+#changeShipHome-link{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+}
+#shipInfo-section{
+    justify-content: start;
+    margin-top: 60px;
+    margin-left: 400px;
+    height: 700px;
+    display: flex;
+}
+#shipInfo-card{
+    width: 25%;
+    border-radius: 20px;
+}
+#ship-name{
+    text-align: center;
+}
+#ship-text{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#editShip-btn{
+    margin-top: 20px;
+    margin-left: 100px;
+     background-color: rgb(229, 237, 248);
+}
+#shipForm-section{
+    display: flex;
+    justify-content: end;
+    height: 1050px;
+    margin-top: -700px;
+    margin-right: 400px;
+}
+#shipForm-card{
+    width: 25%;
+    display: flex;
+    border-radius: 20px;
+}
