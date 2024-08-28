@@ -36,6 +36,7 @@ export default function UserSearch() {
 
   return (
     <section>
+      <div id='userSearch-input'>
       <form className="form w-50" onSubmit={handleFormSubmit}>
         <div className="form-control p-3 mb-2">
           <input
@@ -47,19 +48,20 @@ export default function UserSearch() {
           />
         </div>
       </form>
-      <button className="btn btn-outline-warning" type="submit">Search</button>
+      <button id='userSearch-btn' className="btn" type="submit"><i className="bi bi-search"></i></button>
+      </div>
       <section>
         <h2 className="bs-info-text-emphasis"></h2>
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error.message}</p>}
         {filteredUsers.length === 0 ? (
-          <p>No results found</p>
+          <p id='noUser-result'>No results found</p>
         ) : (
-          <ul>
+          <ul id='user-results'>
             {filteredUsers.map((user) => (
               <li key={user._id}>
-                {user.firstName} - {user.lastName} - {user.email} - {user.admin} - {user._id}
-                <Link to={`/user/${user._id}`}>View Details</Link>
+                {user.firstName} - {user.lastName} - {user.email} - {user.admin.toString()} - {user._id}
+                <Link id='user-details' to={`/user/${user._id}`}><i className="bi bi-clipboard-check-fill"></i></Link>
               </li>
             ))}
           </ul>

@@ -36,6 +36,7 @@ export default function SearchPdf() {
 
   return (
     <section>
+      <div id='pdfSearch-input'>
       <form className="form w-50" onSubmit={handleFormSubmit}>
         <div className="form-control p-3 mb-2">
           <input
@@ -47,19 +48,20 @@ export default function SearchPdf() {
           />
         </div>
       </form>
-      <button className="btn btn-outline-warning" type="submit">Search</button>
+      <button id='pdfSearch-btn' className="btn" type="submit"><i className="bi bi-search"></i></button>
+      </div>
       <section>
         <h2 className="bs-info-text-emphasis"></h2>
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error.message}</p>}
         {filteredPdfs.length === 0 ? (
-          <p>No results found</p>
+          <p id='noPdf-result'>No results found</p>
         ) : (
-          <ul>
+          <ul id='pdf-results'>
             {filteredPdfs.map((pdf) => (
               <li key={pdf._id}>
                 {pdf.fileName} - {pdf.path}
-                <Link to={`/editPdf`}>View Details</Link>
+                <Link to={`/editPdf`}><i className="bi bi-clipboard-check-fill"></i></Link>
               </li>
             ))}
           </ul>

@@ -282,3 +282,70 @@ h2{
     color: red;
     font-size: 30px;
 }
+#userSearch-input{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#userSearch-btn{
+    color: rgb(229, 237, 248);
+    font-size: 30px;
+}
+#noUser-result{
+    text-align: center;
+    font-size: 25px;
+}
+#user-results{
+    text-align: center;
+    font-size: 25px;
+}
+#user-details{
+    color: rgb(229, 237, 248);
+    margin-left: 10px;
+    font-size: 25px;
+}
+#shipSearch-input{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#shipSearch-btn{
+    color: rgb(229, 237, 248);
+    font-size: 30px;
+}
+#noShip-result{
+    text-align: center;
+    font-size: 25px;
+}
+#ship-results{
+    text-align: center;
+    list-style: none;
+    font-size: 25px;
+}
+#ship-details{
+    color: rgb(229, 237, 248);
+    margin-left: 10px;
+    font-size: 25px;
+}
+#pdfSearch-input{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#pdfSearch-btn{
+    color: rgb(229, 237, 248);
+    font-size: 30px;
+}
+#noPdf-result{
+    text-align: center;
+    font-size: 25px;
+}
+#pdf-results{
+    text-align: center;
+    list-style: none;
+}
+#pdf-details{
+    color: rgb(229, 237, 248);
+    margin-left: 10px;
+    font-size: 25px;
+}
