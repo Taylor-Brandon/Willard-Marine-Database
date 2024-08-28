@@ -282,3 +282,23 @@ h2{
     color: red;
     font-size: 30px;
 }
+#userSearch-input{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#userSearch-btn{
+    color: rgb(229, 237, 248);
+    font-size: 30px;
+}
+#noUser-result{
+    text-align: center;
+}
+#user-results{
+    text-align: center;
+}
+#user-details{
+    color: rgb(229, 237, 248);
+    margin-left: 10px;
+    font-size: 20px;
+}
