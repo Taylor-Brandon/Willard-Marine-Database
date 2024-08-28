@@ -21,6 +21,7 @@ import EditShip from './components/editShip/editShip';
 import ChangeShip from './pages/changeShip';
 import EditPdf from './components/editPdf/pdf';
 import SearchUser from './components/userSearch/userSearch';
+import Searcg from './components/search/search';
 
 const httpLink = createHttpLink({
     uri: '/graphql',
@@ -59,6 +60,7 @@ function App() {
           <Route path="/ship/:shipId" element={<ChangeShip />} />
           <Route path="/editPdf" element={<EditPdf />} />
           <Route path="/searchUser" element={<SearchUser />} />
+          <Route path="/search" element={<Search />} />
           </Routes>
       </Router>
     </ApolloProvider>
