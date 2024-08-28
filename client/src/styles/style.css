@@ -90,3 +90,59 @@ h2{
     background-color: rgb(229, 237, 248);
     border: 2px solid rgb(229, 237, 248);
 }
+#editUser-heading{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+}
+#user-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 100px;
+}
+#admin-card{
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: grey;
+
+}
+#card-header{
+    background-color: white;
+    border-bottom: 0px;
+    margin-left: 70px;
+    margin-top: -55px;
+}
+#card-text{
+    margin-left: 85px;
+}
+#email-text{
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+#admin-text{
+    margin-bottom: 10px;
+}
+#edit-list{
+    font-size: 30px;
+    color: black;
+}
+#link-box{
+    display: flex;
+    justify-content: end;
+    margin-top: -55px;
+}
+#home-link{
+    display: flex;
+    justify-content: end;
+    margin-right: -190px;
+    font-size: 30px;
+    color: white;
+}
+#delete-btn{
+    color: red;
+    font-size: 30px;
+}
