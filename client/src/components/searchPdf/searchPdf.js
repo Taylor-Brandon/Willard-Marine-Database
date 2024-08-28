@@ -1,0 +1,70 @@
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+import { useQuery } from "@apollo/client";
+import { QUERY_PDFS } from "../../utils/queries";
+import '../../styles/style.css';
+
+export default function SearchPdf() {
+    const [searchInput, setSearchInput] = useState('');
+    const { loading, error, data } = useQuery(QUERY_PDFS);
+    const [filteredPdfs, setFilteredPdfs] = useState([]);
+
+
+    const handleChange = (event) => {
+        const searchQuery = event.target.value;
+        setSearchInput(searchQuery);
+        filterPdfs(searchQuery);
+      };
+
+
+      const filterPdfs = (searchQuery) => {
+        if (!searchQuery) {
+          setFilteredPdfs([]);
+          return;
+        }
+
+        const filteredPdfs = data.pdfs.filter((pdf) =>
+        pdf.fileName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        pdf.path.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setFilteredPdfs(filteredPdfs);
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+  }
+
+  return (
+    <section>
+      <form className="form w-50" onSubmit={handleFormSubmit}>
+        <div className="form-control p-3 mb-2">
+          <input
+            className='p-2 w-100 border border-white'
+            type="text"
+            value={searchInput}
+            onChange={handleChange}
+            placeholder="Enter pdf file name or path"
+          />
+        </div>
+      </form>
+      <button className="btn btn-outline-warning" type="submit">Search</button>
+      <section>
+        <h2 className="bs-info-text-emphasis"></h2>
+        {loading && <p>Loading...</p>}
+        {error && <p>Error: {error.message}</p>}
+        {filteredPdfs.length === 0 ? (
+          <p>No results found</p>
+        ) : (
+          <ul>
+            {filteredPdfs.map((pdf) => (
+              <li key={pdf._id}>
+                {pdf.fileName} - {pdf.path}
+                <Link to={`/editPdf`}>View Details</Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+    </section>
+  );
+}
