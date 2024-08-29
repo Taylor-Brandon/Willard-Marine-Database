@@ -349,3 +349,21 @@ h2{
     margin-left: 10px;
     font-size: 25px;
 }
+#home-nav{
+    display: flex;
+    justify-content: end;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+#logout-link{
+    font-size: 25px;
+    color: rgb(229, 237, 248);
+    padding: 20px;
+}
+#profile-link{
+    font-size: 25px;
+    color: rgb(229, 237, 248);
+    padding: 20px;
+}
