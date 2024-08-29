@@ -5,11 +5,10 @@ import Search from '../components/search/search';
 export default function Home() {
     return (
         <div>
-            <nav className='nav'>
+            <nav id='home-nav' className='nav'>
                 <ul>
-                    <li><Link id='logout-link' to="/login">Logout</Link></li>
-                    <li><Link id='profile-link' to="/profile">Profile</Link></li>
-                    <li><Link id='editShip-link' to="/editShip">Edit Ship</Link></li>
+                    <li><Link id='logout-link' to="/login"><i className="bi bi-box-arrow-left"></i></Link></li>
+                    <li><Link id='profile-link' to="/profile"><i className="bi bi-person"></i></Link></li>
                 </ul>
             </nav>
             <div>
