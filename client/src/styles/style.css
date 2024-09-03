@@ -359,6 +359,7 @@ ul{
     font-size: 25px;
     color: rgb(229, 237, 248);
     padding: 20px;
+    margin-top: -20px;
 }
 #profile-link{
     font-size: 25px;
@@ -393,6 +394,7 @@ ul{
     display: flex;
     justify-content: end;
     font-size: 25px;
+    margin-top: -5px;
     color: white;
 }
 #profileHome-link{

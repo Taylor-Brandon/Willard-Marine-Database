@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import Auth from '../utils/auth';
 import { UserContext } from '../app';
 
 
@@ -7,6 +8,14 @@ export default function Profile() {
     const { user } = useContext(UserContext);
 
     const userData = user || JSON.parse(localStorage.getItem('user'));
+
+    const navigate = useNavigate();
+
+    const logout = (event) => {
+        event.preventDefault();
+        Auth.logout();
+        <Navigate to='/login' />
+      };
    
     return (
     <div>
@@ -16,7 +25,7 @@ export default function Profile() {
             <div className='links-list'>
             <nav className='nav'>
                 <ul>
-                    <li><Link id='profileLog-link' to="/login"><i className="bi bi-box-arrow-left"></i></Link></li>
+                    <li><button id='profileLog-link' className='btn' onClick={logout}><i className="bi bi-box-arrow-left"></i></button></li>
                     <li><Link id='profileHome-link' to="/home"><i class="bi bi-house"></i></Link></li>
                 </ul>
             </nav>
