@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import { UserContext } from '../app';
 import Auth from '../utils/auth';
 import '../styles/style.css';
 
  export default function Log() {
+  const { loginUser } = useContext(UserContext);
     const [formState, setFormState] = useState({ email: '', password: ''});
     const [login, { error, data }] = useMutation(LOGIN_USER);
     const [loggedIn, setLoggedIn] = useState(false);
@@ -29,6 +31,10 @@ import '../styles/style.css';
         });
     
         Auth.login(data.login.token);
+        const { token, user } = data.login;
+      localStorage.setItem('id_token', token);
+      loginUser(user); 
+
         setLoggedIn(true);
         navigate('/home');
       } catch (error) {

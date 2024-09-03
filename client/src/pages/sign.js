@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
+import { UserContext } from '../app';
 import Auth from '../utils/auth';
 import '../styles/style.css';
 
 export default function Sign() {
+  const { loginUser } = useContext(UserContext);
     const [formState, setFormState] = useState({
         firstName: '',
         lastName: '',
@@ -42,6 +44,9 @@ export default function Sign() {
                 variables: { ...formState},
             });
             Auth.login(data.addUser.token);
+            const { token, user } = data.login;
+      localStorage.setItem('id_token', token);
+      loginUser(user); 
             setLoggedIn(true);
         } catch (e) {
             console.error(e);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -25,50 +25,68 @@ import Search from './components/search/search';
 import SearchPdf from './components/searchPdf/searchPdf';
 import Profile from './pages/profile';
 
+
 const httpLink = createHttpLink({
-    uri: '/graphql',
-  });
-  
-  const authLink = setContext((_, { headers }) => {
-    const token = localStorage.getItem('id_token');
-    return {
-      headers: {
-        ...headers,
-        authorization: token ? `Bearer ${token}` : '',
-      },
-    };
-  });
-  
-  const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache(),
-  });
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
+
+export const UserContext = createContext();
 
 function App() {
-    return(
-    <ApolloProvider client={client}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Sign />} />
-          <Route path="/signup" element={<Sign />} />
-          <Route path="/login" element={<Log />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/addUser" element={<AddUser />} />
-          <Route path="/addShip" element={<AddShip />} />
-          <Route path="/addFile" element={<AddFile />} />
-          <Route path="/editUser" element={<EditUser />} />
-          <Route path="/user/:userId" element={<ChangeUser />} />
-          <Route path="/editShip" element={<EditShip />} />
-          <Route path="/ship/:shipId" element={<ChangeShip />} />
-          <Route path="/editPdf" element={<EditPdf />} />
-          <Route path="/searchUser" element={<SearchUser />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/searchPdf" element={<SearchPdf />} />
-          <Route path="/profile" element={<Profile />} />
+  const [user, setUser] = useState(null);
+
+  const loginUser = (userData) => {
+    setUser(userData);
+    localStorage.setItem('user', JSON.stringify(userData));
+  };
+
+  const logoutUser = () => {
+    setUser(null);
+    localStorage.removeItem('user');
+  };
+
+  return (
+    <UserContext.Provider value={{ user, loginUser, logoutUser }}>
+      <ApolloProvider client={client}>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Sign />} />
+            <Route path="/signup" element={<Sign />} />
+            <Route path="/login" element={<Log />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/addUser" element={<AddUser />} />
+            <Route path="/addShip" element={<AddShip />} />
+            <Route path="/addFile" element={<AddFile />} />
+            <Route path="/editUser" element={<EditUser />} />
+            <Route path="/user/:userId" element={<ChangeUser />} />
+            <Route path="/editShip" element={<EditShip />} />
+            <Route path="/ship/:shipId" element={<ChangeShip />} />
+            <Route path="/editPdf" element={<EditPdf />} />
+            <Route path="/searchUser" element={<SearchUser />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/searchPdf" element={<SearchPdf />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
-      </Router>
-    </ApolloProvider>
-    );
+        </Router>
+      </ApolloProvider>
+    </UserContext.Provider>
+  );
 }
 
 export default App;
