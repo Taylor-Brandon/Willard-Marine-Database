@@ -8,6 +8,7 @@ export const ADD_USER = gql`
         _id
         firstName
         lastName
+        email
         admin
       }
     }
@@ -22,6 +23,7 @@ export const LOGIN_USER = gql`
         _id
         firstName
         lastName
+        email
         admin
       }
     }

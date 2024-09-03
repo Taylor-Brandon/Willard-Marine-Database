@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
+import { UserContext } from '../app';
 
 
 export default function Profile() {
+    const { user } = useContext(UserContext);
+
+    const userData = user || JSON.parse(localStorage.getItem('user'));
+   
     return (
     <div>
-        <div className='links-list'>
+            <h1 id='userData-name'>{userData.firstName} {userData.lastName}</h1>
+            <h2 id='userData-email'>{userData.email}</h2>
+            <h2 id='userData-admin'>Admin: {userData.admin.toString()}</h2>
+            <div className='links-list'>
             <nav className='nav'>
                 <ul>
                     <li><Link id='profileLog-link' to="/login"><i className="bi bi-box-arrow-left"></i></Link></li>

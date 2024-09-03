@@ -365,11 +365,29 @@ ul{
     color: rgb(229, 237, 248);
     padding: 20px;
 }
+#userData-name{
+    display: flex;
+    justify-content: start;
+    margin-left: 10px;
+    font-size: 25px;
+}
+#userData-email{
+    display: flex;
+    justify-content: start;
+    margin-left: 10px;
+    font-size: 20px;
+}
+#userData-admin{
+    display: flex;
+    justify-content: start;
+    margin-left: 10px;
+    font-size: 20px;
+}
 .links-list{
     display: flex;
     justify-content: end;
     margin-right: 20px;
-    margin-top: 0px;
+    margin-top: -100px;
 }
 #profileLog-link{
     display: flex;
