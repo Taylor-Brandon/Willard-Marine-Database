@@ -11,7 +11,7 @@ export const QUERY_USERS = gql`
     }
   }
 `;
-export const QUERY_SINGLE_PROFILE = gql`
+export const QUERY_SINGLE_USER = gql`
   query singleUser($userId: ID!) {
     user(userId: $userId) {
       _id
@@ -22,7 +22,6 @@ export const QUERY_SINGLE_PROFILE = gql`
     }
   }
 `;
-
 export const QUERY_SHIPS = gql`
   query allShips {
     ships {
