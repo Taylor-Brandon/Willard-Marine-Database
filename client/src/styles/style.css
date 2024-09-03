@@ -365,3 +365,99 @@ ul{
     color: rgb(229, 237, 248);
     padding: 20px;
 }
+.links-list{
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+#profileLog-link{
+    display: flex;
+    justify-content: end;
+    font-size: 25px;
+    color: white;
+}
+#profileHome-link{
+    display: flex;
+    justify-content: end;
+    font-size: 25px;
+    color: white;
+    margin-left: 20px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+#profileUser-card{
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 350px;
+    margin-left: 300px;
+}
+#userCard-text{
+    text-align: center;
+}
+.card-footer{
+    display: flex;
+    justify-content: center;
+}
+.card-links{
+    font-size: 20px;
+}
+#editUser-link{
+    color: black;
+    margin-right: 30px;
+}
+#searchUser-link{
+    color: black;
+    margin-right: 30px;
+}
+#addUser-link{
+    color: black;
+    margin-right: 30px;
+}
+#profileShip-card{
+    width: 25%;
+    height: 350px;
+    margin-left: 100px;
+}
+#shipCard-text{
+    text-align: center;
+}
+#editShip-link{
+    color: black;
+    margin-right: 30px;
+}
+#searchShip-link{
+    color: black;
+    margin-right: 30px;
+}
+#addShip-link{
+    color: black;
+    margin-right: 30px;
+}
+#profilePdf-card{
+    width: 25%;
+    height: 350px;
+    margin-left: 555px;
+    margin-top: 20px;
+}
+#pdfCard-text{
+    text-align: center;
+}
+#editPdf-link{
+    color: black;
+    margin-right: 30px;
+}
+#searchPdf-link{
+    color: black;
+    margin-right: 30px;
+}
+#addPdf-link{
+    color: black;
+    margin-right: 30px;
+}
+
+
