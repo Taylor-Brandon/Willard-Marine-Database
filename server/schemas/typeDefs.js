@@ -18,12 +18,20 @@ type Ship {
     HRN: String
     HIN: String
     contactNumber: String
+    annualInspectionDate: String
+    fiveYearInspectionCert: String
+    fiveYearInspectionDate: String
     sponsonSerialNumber: String
     SRBSerialNumber: String
     fuelTankSerialNumber: String
     ZAPR356C2BVMXHookSerialNumber: String
     engineMakeModel: String
     engineSerialNumber: String
+    gear: String
+    gearSerialNumber: String
+    jet: String
+    jetSerialNumber: String
+    volvoQ0087: String
     POCName: String
     POCEmail: String
     POCPhoneNumber: String
@@ -57,12 +65,20 @@ type Mutation {
       HRN: String!
       HIN: String!
       contactNumber: String!
+      annualInspectionDate: String!
+      fiveYearInspectionCert: String!
+      fiveYearInspectionDate: String!
       sponsonSerialNumber: String!
       SRBSerialNumber: String!
       fuelTankSerialNumber: String!
       ZAPR356C2BVMXHookSerialNumber: String!
       engineMakeModel: String!
       engineSerialNumber: String!
+      gear: String!
+      gearSerialNumber: String!
+      jet: String!
+      jetSerialNumber: String!
+      volvoQ0087: String!
       POCName: String!
       POCEmail: String!
       POCPhoneNumber: String!
@@ -85,12 +101,20 @@ type Mutation {
       HRN: String
       HIN: String
       contactNumber: String
+      annualInspectionDate: String
+      fiveYearInspectionCert: String
+      fiveYearInspectionDate: String
       sponsonSerialNumber: String
       SRBSerialNumber: String
       fuelTankSerialNumber: String
       ZAPR356C2BVMXHookSerialNumber: String
       engineMakeModel: String
       engineSerialNumber: String
+      gear: String
+      gearSerialNumber: String
+      jet: String
+      jetSerialNumber: String
+      volvoQ0087: String
       POCName: String
       POCEmail: String
       POCPhoneNumber: String
