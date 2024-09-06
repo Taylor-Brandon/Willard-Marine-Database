@@ -26,12 +26,20 @@ export default function ChangeShip() {
         HRN: '',
         HIN: '',
         contactNumber: '',
+        annualInspectionDate: '',
+        fiveYearInspectionCert: '',
+        fiveYearInspectionDate: '',
         sponsonSerialNumber: '',
         SRBSerialNumber: '',
         fuelTankSerialNumber: '',
         ZAPR356C2BVMXHookSerialNumber: '',
         engineMakeModel: '',
         engineSerialNumber: '',
+        gear: '',
+        gearSerialNumber: '',
+        jet: '',
+        jetSerialNumber: '',
+        volvoQ0087: '',
         POCName: '',
         POCEmail: '',
         POCPhoneNumber: '',
@@ -49,12 +57,20 @@ export default function ChangeShip() {
                     HRN: foundShip.HRN,
                     HIN: foundShip.HIN,
                     contactNumber: foundShip.contactNumber,
+                    annualInspectionDate: foundShip.annualInspectionDate,
+                    fiveYearInspectionCert: foundShip.fiveYearInspectionCert,
+                    fiveYearInspectionDate: foundShip.fiveYearInspectionDate,
                     sponsonSerialNumber: foundShip.sponsonSerialNumber,
                     SRBSerialNumber: foundShip.SRBSerialNumber,
                     fuelTankSerialNumber: foundShip.fuelTankSerialNumber,
                     ZAPR356C2BVMXHookSerialNumber: foundShip.ZAPR356C2BVMXHookSerialNumber,
                     engineMakeModel: foundShip.engineMakeModel,
                     engineSerialNumber: foundShip.engineSerialNumber,
+                    gear: foundShip.gear,
+                    gearSerialNumber: foundShip.gearSerialNumber,
+                    jet: foundShip.jet,
+                    jetSerialNumber: foundShip.jetSerialNumber,
+                    volvoQ0087: foundShip.volvoQ0087,
                     POCName: foundShip.POCName,
                     POCEmail: foundShip.POCEmail,
                     POCPhoneNumber: foundShip.POCPhoneNumber,
@@ -88,12 +104,20 @@ export default function ChangeShip() {
                     <p>HIN: {ship.HIN}</p>
                     <p>HRN: {ship.HRN}</p>
                     <p>Contact Number: {ship.contactNumber}</p>
+                    <p>Annaul Inspection Date: {ship.annualInspectionDate}</p>
+                    <p>Five Year Insepction Cert: {ship.fiveYearInspectionCert}</p>
+                    <p>Five Year Inspection Date: {ship.fiveYearInspectionDate}</p>
                     <p>Sponson Serial Number: {ship.sponsonSerialNumber}</p>
                     <p>SRB Serial Number: {ship.SRBSerialNumber}</p>
                     <p>Fuel Tank Serial Number: {ship.fuelTankSerialNumber}</p>
                     <p>ZAPR 356C2BVMX Hook Serial Number: {ship.ZAPR356C2BVMXHookSerialNumber}</p>
                     <p>Engine Make/Model: {ship.engineMakeModel}</p>
                     <p>Engine Serial Number: {ship.engineSerialNumber}</p>
+                    <p>Gear: {ship.gear}</p>
+                    <p>Gear Serial Number: {ship.gearSerialNumber}</p>
+                    <p>Jet: {ship.jetSerialNumber}</p>
+                    <p>Jet Serial Number: {ship.jetSerialNumber}</p>
+                    <p>VolvoQ0087: {ship.volvoQ0087}</p>
                     <p>POC Name: {ship.POCName}</p>
                     <p>POC Email: {ship.POCEmail}</p>
                     <p>POC Phone Number: {ship.POCPhoneNumber}</p>
@@ -160,6 +184,36 @@ export default function ChangeShip() {
                     <input
                     className='form-control'
                         type="text"
+                        name="annaulInspectionDate"
+                        value={formData.annualInspectionDate}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor='annualInspectionDate' className='form-label'>Annaul Inspection Date</label>
+                    </div>
+                    <div className='form-floating ms-3 me-3'>
+                    <input
+                    className='form-control'
+                        type="text"
+                        name="fiveYearInspectionCert"
+                        value={formData.fiveYearInspectionCert}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor='fiveYearInspectionCert' className='form-label'>Five Year Inspection Cert</label>
+                    </div>
+                    <div className='form-floating ms-3 me-3'>
+                    <input
+                    className='form-control'
+                        type="text"
+                        name="fiveYearInspectionDate"
+                        value={formData.fiveYearInspectionDate}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor='fiveYearInspectionDate' className='form-label'>Five Year Inspection Date</label>
+                    </div>
+                    <div className='form-floating ms-3 me-3'>
+                    <input
+                    className='form-control'
+                        type="text"
                         name="sponsonSerialNumber"
                         value={formData.sponsonSerialNumber}
                         onChange={handleChange}
@@ -215,6 +269,56 @@ export default function ChangeShip() {
                         onChange={handleChange}
                     />
                     <label htmlFor='engineSerialNumbber' className='form-label'>Engine Serial Number</label>
+                    </div>
+                    <div className='form-floating ms-3 me-3'>
+                    <input
+                    className='form-control'
+                        type="text"
+                        name="gear"
+                        value={formData.gear}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor='gear' className='form-label'>Gear</label>
+                    </div>
+                    <div className='form-floating ms-3 me-3'>
+                    <input
+                    className='form-control'
+                        type="text"
+                        name="gearSerialNumber"
+                        value={formData.gearSerialNumber}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor='gearSerialNumber' className='form-label'>Gear Serial Number</label>
+                    </div>
+                    <div className='form-floating ms-3 me-3'>
+                    <input
+                    className='form-control'
+                        type="text"
+                        name="jet"
+                        value={formData.jet}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor='jet' className='form-label'>Jet</label>
+                    </div>
+                    <div className='form-floating ms-3 me-3'>
+                    <input
+                    className='form-control'
+                        type="text"
+                        name="jetSerialNumber"
+                        value={formData.jetSerialNumber}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor='jetSerialNumber' className='form-label'>Jet Serial Number</label>
+                    </div>
+                    <div className='form-floating ms-3 me-3'>
+                    <input
+                    className='form-control'
+                        type="text"
+                        name="volvoQ0087"
+                        value={formData.volvoQ0087}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor='volvoQ0087' className='form-label'>VolvoQ0087</label>
                     </div>
                     <div className='form-floating ms-3 me-3'>
                     <input
