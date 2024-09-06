@@ -27,12 +27,20 @@ export default function Search() {
       ship.HRN.toLowerCase().includes(searchQuery.toLowerCase()) ||
       ship.HIN.toLowerCase().includes(searchQuery.toLowerCase()) ||
       ship.contactNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      ship.fiveYearInspectionCert.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      ship.fiveYearInspectionDate.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      ship.annualInspectionDate.toLowerCase().includes(searchQuery.toLowerCase()) ||
       ship.sponsonSerialNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
       ship.SRBSerialNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
       ship.fuelTankSerialNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
       ship.ZAPR356C2BVMXHookSerialNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
       ship.engineMakeModel.toLowerCase().includes(searchQuery.toLowerCase()) ||
       ship.engineSerialNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      ship.gear.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      ship.gearSerialNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      ship.jet.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      ship.jetSerialNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      ship.volvoQ0087.toLowerCase().includes(searchQuery.toLowerCase()) ||
       ship.POCName.toLowerCase().includes(searchQuery.toLowerCase()) ||
       ship.POCEmail.toLowerCase().includes(searchQuery.toLowerCase()) ||
       ship.POCPhoneNumber.toLowerCase().includes(searchQuery.toLowerCase())

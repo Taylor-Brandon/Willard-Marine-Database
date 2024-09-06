@@ -11,12 +11,20 @@ export default function AddShip() {
         HRN: '',
         HIN: '',
         contactNumber: '',
+        annaulInspectionDate: '',
+        fiveYearInspectionCert: '',
+        fiveYearInspectionDate: '',
         sponsonSerialNumber: '',
         SRBSerialNumber: '',
         fuelTankSerialNumber: '',
         ZAPR356C2BVMXHookSerialNumber: '',
         engineMakeModel: '',
         engineSerialNumber: '',
+        gear: '',
+        gearSerialNumber: '',
+        jet: '',
+        jetSerialNumber: '',
+        volvoQ0087: '',
         POCName: '',
         POCEmail: '',
         POCPhoneNumber: '',
@@ -66,9 +74,7 @@ export default function AddShip() {
                   <label htmlFor="shipName" className="form-label">
                     Ship Name
                   </label>
-    
                   </div>
-    
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -82,7 +88,6 @@ export default function AddShip() {
                     model
                   </label>
                   </div>
-    
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -96,7 +101,6 @@ export default function AddShip() {
                     HRN
                   </label>
                   </div>
-    
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -110,7 +114,6 @@ export default function AddShip() {
                     HIN
                   </label>
                   </div>
-    
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -124,7 +127,45 @@ export default function AddShip() {
                     Contact Number
                   </label>
                   </div>
-    
+                  <div className="form-floating">
+                  <input
+                    className="form-control"
+                    value={formState.annaulInspectionDate}
+                    name="annualInspectionDate"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="annaulInspectionDate"
+                  />
+                  <label htmlFor="annaulInspectionDate" className="form-label">
+                    Annaul Inspection Date
+                  </label>
+                  </div>
+                  <div className="form-floating">
+                  <input
+                    className="form-control"
+                    value={formState.fiveYearInspectionCert}
+                    name="fiveYearInspectionCert"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="fiveYearInspectionCert"
+                  />
+                  <label htmlFor="fiveYearInspectionCert" className="form-label">
+                    Five Year Inspection Cert
+                  </label>
+                  </div>
+                  <div className="form-floating">
+                  <input
+                    className="form-control"
+                    value={formState.fiveYearInspectionDate}
+                    name="fiveYearInspectionDate"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="fiveYearInspectionDate"
+                  />
+                  <label htmlFor="fiveYearInspectionDate" className="form-label">
+                    Five Year Inspection Date
+                  </label>
+                  </div>
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -138,7 +179,6 @@ export default function AddShip() {
                     Sponson Serial Number
                   </label>
                   </div>
-
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -152,7 +192,6 @@ export default function AddShip() {
                     SRB Serial Number
                   </label>
                   </div>
-    
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -166,7 +205,6 @@ export default function AddShip() {
                     Fuel Tank Serial Number
                   </label>
                   </div>
-
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -180,7 +218,6 @@ export default function AddShip() {
                   ZAPR356C2BVMXHookSerialNumber
                   </label>
                   </div>
-    
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -194,7 +231,6 @@ export default function AddShip() {
                     Engine Make/Model
                   </label>
                   </div>
-    
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -208,7 +244,71 @@ export default function AddShip() {
                     Engine Serial Number
                   </label>
                   </div>
-    
+                  <div className="form-floating">
+                  <input
+                    className="form-control"
+                    value={formState.gear}
+                    name="gear"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="gear"
+                  />
+                  <label htmlFor="gear" className="form-label">
+                    Gear
+                  </label>
+                  </div>
+                  <div className="form-floating">
+                  <input
+                    className="form-control"
+                    value={formState.gearSerialNumber}
+                    name="gearSerialNumber"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="gearSerialNumber"
+                  />
+                  <label htmlFor="gearSerialNumber" className="form-label">
+                    Gear Serial Number
+                  </label>
+                  </div>
+                  <div className="form-floating">
+                  <input
+                    className="form-control"
+                    value={formState.jet}
+                    name="jet"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="jet"
+                  />
+                  <label htmlFor="jet" className="form-label">
+                    Jet
+                  </label>
+                  </div>
+                  <div className="form-floating">
+                  <input
+                    className="form-control"
+                    value={formState.jetSerialNumber}
+                    name="jetSerialNumber"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="jetSerialNumber"
+                  />
+                  <label htmlFor="jetSerialNumber" className="form-label">
+                    Jet Serial Number
+                  </label>
+                  </div>
+                  <div className="form-floating">
+                  <input
+                    className="form-control"
+                    value={formState.volvoQ0087}
+                    name="volvoQ0087"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="volvoq0087"
+                  />
+                  <label htmlFor="volvoQ0087" className="form-label">
+                   VolovQ0087
+                  </label>
+                  </div>
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -222,7 +322,6 @@ export default function AddShip() {
                     POC Name
                   </label>
                   </div>
-    
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -236,7 +335,6 @@ export default function AddShip() {
                     POC Email
                   </label>
                   </div>
-    
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -250,7 +348,6 @@ export default function AddShip() {
                     POC Phone Number
                   </label>
                   </div>
-
                   <div className="form-floating">
                   <input
                     className="form-control"
@@ -265,7 +362,6 @@ export default function AddShip() {
                   </label>
                   </div>
                   </div>
-
                   <button id="shipForm-btn" className="btn mx-auto" type="submit">Submit</button>
                   </form>
                   </card>

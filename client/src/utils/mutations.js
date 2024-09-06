@@ -37,12 +37,20 @@ export const ADD_SHIP = gql`
     $HRN: String!,
     $HIN: String!,
     $contactNumber: String!,
+    $annualInspectionDate: String!,
+    $fiveYearInspectionCert: String!,
+    $fiveYearInspectionDate: String!,
     $sponsonSerialNumber: String!,
     $SRBSerialNumber: String!,
     $fuelTankSerialNumber: String!,
     $ZAPR356C2BVMXHookSerialNumber: String!,
     $engineMakeModel: String!,
     $engineSerialNumber: String!,
+    $gear: String!,
+    $gearSerialNumber: String!,
+    $jet: String!,
+    $jetSerialNumber: String!,
+    $volvoQ0087: String!,
     $POCName: String!,
     $POCEmail: String!,
     $POCPhoneNumber: String!,
@@ -54,12 +62,20 @@ export const ADD_SHIP = gql`
       HRN: $HRN,
       HIN: $HIN,
       contactNumber: $contactNumber,
+      annaulInspectionDate: $annualInspectionDate,
+      fiveYearInspectionCert: $fiveYearInspectionCert,
+      fiveYearInspectionDate: $fiveYearInspectionDate,
       sponsonSerialNumber: $sponsonSerialNumber,
       SRBSerialNumber: $SRBSerialNumber,
       fuelTankSerialNumber: $fuelTankSerialNumber,
       ZAPR356C2BVMXHookSerialNumber: $ZAPR356C2BVMXHookSerialNumber,
       engineMakeModel: $engineMakeModel,
       engineSerialNumber: $engineSerialNumber,
+      gear: $gear,
+      gearSerialNumber: $gearSerialNumber,
+      jet: $jet,
+      jetSerialNumber: $jetSerialNumber,
+      volvoQ0087: $volvoQ0087,
       POCName: $POCName,
       POCEmail: $POCEmail,
       POCPhoneNumber: $POCPhoneNumber,
@@ -71,12 +87,20 @@ export const ADD_SHIP = gql`
       HRN
       HIN
       contactNumber
+      annualInspectionDate
+      fiveYearInspectionCert
+      fiveYearInspectionDate
       sponsonSerialNumber
       SRBSerialNumber
       fuelTankSerialNumber
       ZAPR356C2BVMXHookSerialNumber
       engineMakeModel
       engineSerialNumber
+      gear
+      gearSerialNumber
+      jet
+      jetSerialNumber
+      volvoQ0087
       POCName
       POCEmail
       POCPhoneNumber
@@ -124,12 +148,20 @@ export const UPDATE_SHIP = gql`
     $HRN: String
     $HIN: String
     $contactNumber: String
+    $annualInspectionDate: String
+    $fiveYearInspectionCert: String
+    $fiveYearInspectionDate: String
     $sponsonSerialNumber: String
     $SRBSerialNumber: String
     $fuelTankSerialNumber: String
     $ZAPR356C2BVMXHookSerialNumber: String
     $engineMakeModel: String
     $engineSerialNumber: String
+    $gear: String
+    $gearSerialNumber: String
+    $jet: String
+    $jetserialNumber: String
+    $volvoQ0087: String
     $POCName: String
     $POCEmail: String
     $POCPhoneNumber: String
@@ -142,12 +174,20 @@ export const UPDATE_SHIP = gql`
       HRN: $HRN
       HIN: $HIN
       contactNumber: $contactNumber
+      annaulInspectionDate: $annaulInspectionDate
+      fiveYearInspectionCert: $fiveYearInspectionCert
+      fiveYearInspectionDate: $fiveYearInspectionDate
       sponsonSerialNumber: $sponsonSerialNumber
       SRBSerialNumber: $SRBSerialNumber
       fuelTankSerialNumber: $fuelTankSerialNumber
       ZAPR356C2BVMXHookSerialNumber: $ZAPR356C2BVMXHookSerialNumber
       engineMakeModel: $engineMakeModel
       engineSerialNumber: $engineSerialNumber
+      gear: $gear
+      gearSerialNumber: $gearSerialNumber
+      jet: $jet
+      jetSerialNumber: $jetSerialNumber
+      volvoQ0087: $volvoQ0087
       POCName: $POCName
       POCEmail: $POCEmail
       POCPhoneNumber: $POCPhoneNumber
@@ -159,12 +199,20 @@ export const UPDATE_SHIP = gql`
       HRN
       HIN
       contactNumber
+      annaulInspectionDate
+      fiveYearInspectionCert
+      fiveYearInspectionDate
       sponsonSerialNumber
       SRBSerialNumber
       fuelTankSerialNumber
       ZAPR356C2BVMXHookSerialNumber
       engineMakeModel
       engineSerialNumber
+      gear
+      gearSerialNumber
+      jet
+      jetSerialNumber
+      volvoQ0087
       POCName
       POCEmail
       POCPhoneNumber
