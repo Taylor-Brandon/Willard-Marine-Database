@@ -61,7 +61,7 @@ export default function SearchPdf() {
             {filteredPdfs.map((pdf) => (
               <li key={pdf._id}>
                 {pdf.fileName} - {pdf.path}
-                <Link to={`/editPdf`}><i className="bi bi-clipboard-check-fill"></i></Link>
+                <Link id='pdf-details' to={`/editPdf`}><i className="bi bi-clipboard-check-fill"></i></Link>
               </li>
             ))}
           </ul>
