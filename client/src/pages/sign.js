@@ -46,6 +46,7 @@ export default function Sign() {
             Auth.login(data.addUser.token);
             const { token, user } = data.login;
       localStorage.setItem('id_token', token);
+      localStorage.setItem('formData', formState);
       loginUser(user); 
             setLoggedIn(true);
         } catch (e) {
