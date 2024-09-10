@@ -81,13 +81,31 @@ h2{
     width: 50%;
     background-color: rgb(229, 237, 248);
 }
+#addPdfHome-link{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+}
+#addPdfProfile-link{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    margin-right: 80px;
+    margin-top: -42px;
+}
+#addFile{
+    display: flex;
+    justify-content: center;
+}
 #file-form{
     margin-top: 20px;
     height: 70px;
     width: 40%;
     display: flex;
     justify-content: center;
-
 }
 #file-directions{
     margin-top: 30px;

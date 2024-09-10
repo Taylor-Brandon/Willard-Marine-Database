@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import { useDropzone } from 'react-dropzone';
 import { useMutation } from '@apollo/client';
 import { ADD_PDF } from '../../utils/mutations'; 
@@ -35,7 +36,10 @@ export default function AddFile() {
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
   return (
-    <div className='container'>
+    <div>
+    <Link id="addPdfHome-link" to="/home"><i className="bi bi-house"></i></Link>
+    <Link id='addPdfProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
+    <div id='addFile' className='container'>
       <form id='file-form'>
     <div className="file-upload">
       <div {...getRootProps()} className="drop-file">
@@ -50,6 +54,7 @@ export default function AddFile() {
       )}
     </div>
     </form>
+    </div>
     </div>
   );
 };
