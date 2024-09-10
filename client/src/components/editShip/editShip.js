@@ -34,7 +34,8 @@ export default function EditShip() {
                         <div>Loading. . .</div>
                     ) : (
                         <div>
-                            <Link id="home-link" to="/home"><i className="bi bi-house"></i></Link>
+                            <Link id='editShipHome-link' to="/home"><i class="bi bi-house"></i></Link>
+                            <Link id='editShipProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
                             <div id="ship-list" className="flex-row justify-space-betweeen my-4">
                             {ships.map((ship) => (
                                 <div key={ship._id} className="col-12 col-xl-6 ms-2">

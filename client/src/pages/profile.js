@@ -59,7 +59,7 @@ export default function Profile() {
             <div className='card-footer'>
                 <ul className='card-links'>
                     <li><Link id='editShip-link' to="/editShip"><i class="bi bi-pen"></i></Link></li>
-                    <li><Link id='searchShip-link' to="/search"><i class="bi bi-search"></i></Link></li>
+                    <li><Link id='searchShip-link' to="/shipSearch"><i class="bi bi-search"></i></Link></li>
                     <li><Link id='addShip-link' to="/addShip"><i class="bi bi-plus-square"></i></Link></li>
                 </ul>
             </div>

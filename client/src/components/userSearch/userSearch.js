@@ -36,6 +36,8 @@ export default function UserSearch() {
 
   return (
     <section>
+      <Link id='userSearchHome-link' to="/home"><i class="bi bi-house"></i></Link>
+      <Link id='userSearchProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
       <div id='userSearch-input'>
       <form className="form w-50" onSubmit={handleFormSubmit}>
         <div className="form-control p-3 mb-2">
