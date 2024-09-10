@@ -4,7 +4,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_SHIPS } from "../../utils/queries";
 import "../../styles/style.css";
 
-export default function Search() {
+export default function ShipSearch() {
     const [searchInput, setSearchInput] = useState('');
   const { loading, error, data } = useQuery(QUERY_SHIPS);
   const [filteredShips, setFilteredShips] = useState([]);
@@ -54,6 +54,8 @@ export default function Search() {
 
   return (
     <section>
+        <Link id="shipSearchHome-link" to="/home"><i className="bi bi-house"></i></Link>
+        <Link id='shipSearchProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
       <div id='shipSearch-input'>
       <form className="form w-50" onSubmit={handleFormSubmit}>
         <div className="form-control p-3 mb-2">

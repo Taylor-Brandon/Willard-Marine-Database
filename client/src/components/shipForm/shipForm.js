@@ -59,6 +59,9 @@ export default function AddShip() {
       };
 
         return(
+          <div>
+            <Link id="shipFormHome-link" to="/home"><i className="bi bi-house"></i></Link>
+            <Link id='shipFormProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
             <card id='ship-form'>
                   <form className="form w-25" onSubmit={handleFormSubmit}>
                     <div className="input-fields">
@@ -365,5 +368,6 @@ export default function AddShip() {
                   <button id="shipForm-btn" className="btn mx-auto" type="submit">Submit</button>
                   </form>
                   </card>
+                  </div>
         )
       }

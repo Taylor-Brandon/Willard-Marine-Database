@@ -36,6 +36,7 @@ const EditUser = () => {
                     ) : (
                         <div>
                              <Link id="home-link" to="/home"><i className="bi bi-house"></i></Link>
+                             <Link id='editUserProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
                             <div id="user-list" className="flex-row justify-space-between my-4">
                                 {users.map((user) => (
                                     <div key={user._id} className="col-12 col-xl-6 ms-2">

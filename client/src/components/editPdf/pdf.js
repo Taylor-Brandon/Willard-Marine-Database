@@ -35,7 +35,8 @@ export default function EditPdf() {
                         <div>Loading. . .</div>
                     ) : (
                         <div>
-                            <Link id="pdfHome-link" to="/home"><i className="bi bi-house"></i></Link>
+                            <Link id="editPdfHome-link" to="/home"><i className="bi bi-house"></i></Link>
+                            <Link id='editPdfProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
                             <div id="file-list" className="flex-row justify-space-between my-4">
                                 {pdfs.map((pdf) => (
                                     <div key={pdf._id} className="col-12 col-xl-6">

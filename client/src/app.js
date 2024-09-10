@@ -25,6 +25,7 @@ import Search from './components/search/search';
 import SearchPdf from './components/searchPdf/searchPdf';
 import Profile from './pages/profile';
 import RenderPdf from './components/renderPdf/renderPdf';
+import ShipSearch from './components/shipSearch/shipSearch';
 
 
 const httpLink = createHttpLink({
@@ -82,6 +83,7 @@ function App() {
             <Route path="/searchUser" element={<SearchUser />} />
             <Route path="/search" element={<Search />} />
             <Route path="/searchPdf" element={<SearchPdf />} />
+            <Route path="/shipSearch" element={<ShipSearch />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/renderPdf" element={<RenderPdf />} />
           </Routes>

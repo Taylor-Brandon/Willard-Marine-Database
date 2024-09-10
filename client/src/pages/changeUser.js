@@ -57,6 +57,7 @@ export default function ChangeUser() {
     return (
         <div>
              <Link id="changeUserHome-link" to="/home"><i className="bi bi-house"></i></Link>
+             <Link id='changeUserProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
             <div id='info-section'>
             <div id='info-card' className='card'>
             {user && (

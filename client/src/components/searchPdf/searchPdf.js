@@ -36,6 +36,8 @@ export default function SearchPdf() {
 
   return (
     <section>
+      <Link id="searchPdfHome-link" to="/home"><i className="bi bi-house"></i></Link>
+        <Link id='searchPdfProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
       <div id='pdfSearch-input'>
       <form className="form w-50" onSubmit={handleFormSubmit}>
         <div className="form-control p-3 mb-2">
