@@ -24,6 +24,7 @@ import SearchUser from './components/userSearch/userSearch';
 import Search from './components/search/search';
 import SearchPdf from './components/searchPdf/searchPdf';
 import Profile from './pages/profile';
+import RenderPdf from './components/renderPdf/renderPdf';
 
 
 const httpLink = createHttpLink({
@@ -82,6 +83,7 @@ function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/searchPdf" element={<SearchPdf />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/renderPdf" element={<RenderPdf />} />
           </Routes>
         </Router>
       </ApolloProvider>
