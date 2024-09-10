@@ -17,6 +17,7 @@
         "concurrently": "^5.1.0"
     },
     "dependencies": {
-        "dotenv": "^16.4.5"
+        "dotenv": "^16.4.5",
+        "pdfjs-dist": "^3.6.172"
     }
 }
