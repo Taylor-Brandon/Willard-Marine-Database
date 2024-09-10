@@ -315,10 +315,24 @@ h2{
     text-align: center;
     font-size: 25px;
 }
+#searchShip-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 #ship-results{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     list-style: none;
     font-size: 25px;
+}
+#indiv-ship{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 50px;
+    margin-top: 10px;
 }
 #ship-details{
     color: rgb(229, 237, 248);
@@ -326,8 +340,7 @@ h2{
     font-size: 25px;
 }
 #pdfSearch-input{
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-top: 20px;
 }
 #pdfSearch-btn{

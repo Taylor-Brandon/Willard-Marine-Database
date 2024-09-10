@@ -75,14 +75,16 @@ export default function Search() {
         {filteredShips.length === 0 ? (
           <p id='noShip-result'>No results found</p>
         ) : (
+          <div id='searchShip-list'>
           <ul id='ship-results'>
             {filteredShips.map((ship) => (
-              <li key={ship._id}>
+              <li id='indiv-ship' key={ship._id}>
                 {ship.shipName} - {ship.model}
                 <Link id='ship-details' to={`/ship/${ship._id}`}><i className="bi bi-clipboard-check-fill"></i></Link>
               </li>
             ))}
           </ul>
+          </div>
         )}
       </section>
     </section>
