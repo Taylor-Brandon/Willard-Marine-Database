@@ -35,7 +35,7 @@ export default function AddFile() {
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
   return (
-    <div className='container'>
+    <div id='addFile' className='container'>
       <form id='file-form'>
     <div className="file-upload">
       <div {...getRootProps()} className="drop-file">
