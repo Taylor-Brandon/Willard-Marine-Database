@@ -26,6 +26,7 @@ export default function AddFile() {
             path,
           },
         });
+        alert("File added successfully");
         console.log('PDF uploaded successfully:', data);
       } catch (error) {
         console.error('Error uploading PDF:', error);
