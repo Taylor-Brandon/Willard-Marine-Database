@@ -95,6 +95,7 @@ export default function ChangeShip() {
     return (
         <div>
             <Link id="changeShipHome-link" to="/home"><i className="bi bi-house"></i></Link>
+            <Link id='changeShipProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
             <div id='shipInfo-section'>
             <div id='shipInfo-card' className='card'>
             {ship && (

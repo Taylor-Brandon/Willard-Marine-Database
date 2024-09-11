@@ -28,7 +28,7 @@ export default function ChangeUser() {
     });
 
     useEffect(() => {
-        if(data && data.users) {
+        if (data && data.users) {
             const foundUser = data.users.find(user => user._id === userId);
             setUser(foundUser);
             if (foundUser) {
@@ -46,7 +46,13 @@ export default function ChangeUser() {
     if (error) return <p>Error: {error.message}</p>;
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleAdminChange = (e) => {
+        const value = e.target.value === "true";
+        setFormData({ ...formData, admin: value });
     };
 
     const handleSubmit = (e) => {
@@ -56,78 +62,74 @@ export default function ChangeUser() {
 
     return (
         <div>
-             <Link id="changeUserHome-link" to="/home"><i className="bi bi-house"></i></Link>
-             <Link id='changeUserProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
+            <Link id="changeUserHome-link" to="/home"><i className="bi bi-house"></i></Link>
+            <Link id='changeUserProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
             <div id='info-section'>
-            <div id='info-card' className='card'>
-            {user && (
-                <div className='card-body'>
-                    <h1 id='user-name'>{user.firstName} {user.lastName}</h1>
-                    <p>Email: {user.email}</p>
-                    <p>Admin: {user.admin.toString()}</p>
-                    <p>ID: {user._id}</p>
-                    </div>
-            )}
+                <div id='info-card' className='card'>
+                    {user && (
+                        <div className='card-body'>
+                            <h1 id='user-name'>{user.firstName} {user.lastName}</h1>
+                            <p>Email: {user.email}</p>
+                            <p>Admin: {user.admin.toString()}</p>
+                            <p>ID: {user._id}</p>
+                        </div>
+                    )}
+                </div>
             </div>
-            </div>
-                <div id="userForm-section">
+            <div id="userForm-section">
                 <div id='userForm-card' className='card'>
-                <div className='card-name'>
-            <form className='form' onSubmit={handleSubmit}>
-                <div className='form-floating ms-3 me-3'>
-                    <input
-                    className='form-control'
-                        type="text"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                    />
-                    <label htmlFor='firstName' className='form-label'>First Name</label>
+                    <div className='card-name'>
+                        <form className='form' onSubmit={handleSubmit}>
+                            <div className='form-floating ms-3 me-3'>
+                                <input
+                                    className='form-control'
+                                    type="text"
+                                    name="firstName"
+                                    value={formData.firstName}
+                                    onChange={handleChange}
+                                />
+                                <label htmlFor='firstName' className='form-label'>First Name</label>
+                            </div>
+                            <div className='form-floating ms-3 me-3'>
+                                <input
+                                    className='form-control'
+                                    type="text"
+                                    name="lastName"
+                                    value={formData.lastName}
+                                    onChange={handleChange}
+                                />
+                                <label htmlFor='lastName' className='form-label'>Last Name</label>
+                            </div>
+                            <div className='form-floating ms-3 me-3'>
+                                <input
+                                    className='form-control'
+                                    type="text"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                />
+                                <label htmlFor='email' className='form-label'>Email</label>
+                            </div>
+                            <div id="dropdown" className="form-floating mt-3 w-50 ms-3">
+                                <select
+                                    className="form-select"
+                                    value={formData.admin ? "true" : "false"}
+                                    name="admin"
+                                    onChange={handleAdminChange}
+                                >
+                                    <option value="true">Admin</option>
+                                    <option value="false">Not Admin</option>
+                                </select>
+                                <label htmlFor="admin" className="form-label">
+                                    Admin
+                                </label>
+                            </div>
+                            <button id='editUser-btn' className='btn' type="submit" disabled={loading}>Update User</button>
+                            {error && <p>Error: {error.message}</p>}
+                        </form>
+                    </div>
                 </div>
-                <div className='form-floating ms-3 me-3'>
-                    <input
-                    className='form-control'
-                        type="text"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                    />
-                    <label htmlFor='lastName' className='form-label'>Last Name</label>
-                </div>
-                <div className='form-floating ms-3 me-3'>
-                    <input
-                    className='form-control'
-                        type="text"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                    />
-                    <label htmlFor='email' className='form-label'>Email</label>
-                </div>
-                <div id="dropdown" className="form-floating mt-3 w-50 ms-3 3">
-              <select
-                className="form-select"
-                value={formData.admin}
-                name="admin"
-                onChange={(e) => setFormData({ ...formData, admin: e.target.checked })}
-              >
-                <option value="">Select Admin Status</option>
-                <option value="true">Admin</option>
-                <option value="false">Not Admin</option>
-              </select>
-              <label htmlFor="admin" className="form-label">
-                Admin
-              </label>
-            </div>
-                <button id='editUser-btn' className='btn' type="submit" disabled={loading}>Update User</button>
-                {error && <p>Error: {error.message}</p>}
-            </form>
-            </div>
-            </div>
             </div>
         </div>
     );
 };
-
-
-
