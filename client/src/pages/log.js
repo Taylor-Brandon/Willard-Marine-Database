@@ -24,7 +24,6 @@ import '../styles/style.css';
   
     const handleFormSubmit = async (e) => {
       e.preventDefault();
-      console.log(formState);
       try {
         const { data } = await login({
           variables: { ...formState },
@@ -32,8 +31,8 @@ import '../styles/style.css';
     
         Auth.login(data.login.token);
         const { token, user } = data.login;
-      localStorage.setItem('id_token', token);
-      loginUser(user); 
+        localStorage.setItem('id_token', token);
+        loginUser(user); 
 
         setLoggedIn(true);
         navigate('/home');

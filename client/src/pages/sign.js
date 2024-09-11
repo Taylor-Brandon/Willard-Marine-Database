@@ -36,19 +36,19 @@ export default function Sign() {
         });
       };
 
-    const handleFormSubmit = async (e) => {
+      const handleFormSubmit = async (e) => {
         e.preventDefault();
-
+        console.log(formState);
         try {
-            const {data} = await addUser({
-                variables: { ...formState},
+            const { data } = await addUser({
+                variables: { ...formState },
             });
-            Auth.login(data.addUser.token);
-            const { token, user } = data.login;
-      localStorage.setItem('id_token', token);
-      localStorage.setItem('formData', formState);
-      loginUser(user); 
+            const { token, user } = data.addUser;
+            Auth.login(token); 
+            localStorage.setItem('user', JSON.stringify(user));
+            loginUser(user); 
             setLoggedIn(true);
+    
         } catch (e) {
             console.error(e);
         }
