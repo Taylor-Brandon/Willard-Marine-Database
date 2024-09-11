@@ -264,14 +264,6 @@ h2{
     margin-right: -240px;
     margin-top: -10px;
 }
-#editShipProfile-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: -180px;
-    margin-top: -42px;
-}
 #editShip-link{
     color: black;
     font-size: 20px;
@@ -283,11 +275,27 @@ h2{
     justify-content: end;
     margin-right: 30px;
 }
+#changeShipProfile-link{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    margin-right: 80px;
+    margin-top: -42px;
+}
+#changeShipprofile-link{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    margin-top: -42px;
+    margin-right: 70px;
+}
 #shipInfo-section{
     justify-content: start;
     margin-top: 60px;
     margin-left: 400px;
-    height: 700px;
+    height: 1000px;
     display: flex;
 }
 #shipInfo-card{
@@ -324,8 +332,8 @@ h2{
 #shipForm-section{
     display: flex;
     justify-content: end;
-    height: 1050px;
-    margin-top: -700px;
+    height: 1600px;
+    margin-top: -1000px;
     margin-right: 400px;
 }
 #shipForm-card{
