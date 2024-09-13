@@ -643,5 +643,24 @@ ul{
     margin-right: 70px;
     margin-top: -42px;
 }
+.File-Form{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.formStyle{
+    width: 50%;
+}
+h4{
+    text-align: center;
+}
+.btn-area{
+    display: flex;
+    justify-content: center;
+}
+#file-btn{
+    background-color: white;
+}
+
 
 
