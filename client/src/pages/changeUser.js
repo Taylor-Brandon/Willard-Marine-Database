@@ -120,7 +120,7 @@ export default function ChangeUser() {
                                     value={formData.password}
                                     onChange={handleChange}
                                 />
-                                <label htmlFor='email' className='form-label'>Email</label>
+                                <label htmlFor='password' className='form-label'>Password</label>
                             </div>
                             <div id="dropdown" className="form-floating mt-3 w-50 ms-3">
                                 <select
