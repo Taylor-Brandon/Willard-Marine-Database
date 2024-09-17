@@ -9,11 +9,10 @@ const pdfSchema = new Schema({
     type: String,
     required: true
   },
-  user: 
-    {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    }
+  ship : {
+    type: String,
+    required: true
+  }
 });
 
 const Pdf = model('Pdf', pdfSchema);

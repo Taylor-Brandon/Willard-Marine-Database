@@ -86,11 +86,16 @@ export default function ChangeShip() {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+    const handleView = (pdf) => {
+        window.open(`http://localhost:3001/${pdf.path}`, "_blank");
+      }
+      
 
     const handleSubmit = (e) => {
         e.preventDefault();
         updateShip({ variables: { shipId, ...formData } });
     };
+
     
     return (
         <div>
@@ -100,7 +105,7 @@ export default function ChangeShip() {
             <div id='shipInfo-card' className='card'>
             {ship && (
                 <div>
-                    <h1 id='ship-name'>{ship.shipName} {ship.model}</h1>
+                    <h1 id='ship-name'>{ship.shipName} {ship.model} {ship._id}</h1>
                     <div id="ship-text">
                     <p>HIN: {ship.HIN}</p>
                     <p>HRN: {ship.HRN}</p>
@@ -122,9 +127,8 @@ export default function ChangeShip() {
                     <p>POC Name: {ship.POCName}</p>
                     <p>POC Email: {ship.POCEmail}</p>
                     <p>POC Phone Number: {ship.POCPhoneNumber}</p>
-                    <p>ID: {ship._id}</p>
                     </div>
-                </div>
+                    </div>
             )}
             </div>
             </div>

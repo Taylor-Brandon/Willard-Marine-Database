@@ -43,7 +43,7 @@ export default function EditPdf() {
                                         <div className="card ms-3 mb-3">
                                         <nav className="card-heading">
                                             <h4 id="pdfCard-header" className="card-header p-2 m-0">
-                                                {pdf.fileName} {pdf.path} <br />
+                                                {pdf.fileName} {pdf.path} {pdf.ship} <br />
                                                 </h4>
                                                 </nav>
                                                 <div id="pdfLink-box">

@@ -88,11 +88,12 @@ const shipSchema = new Schema({
     notes: { 
         type: String
     },
-    user: 
+    pdfs: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'User'
+            ref: 'Pdf'
         }
+    ]
 });
 
 const Ship = model("Ship", shipSchema);

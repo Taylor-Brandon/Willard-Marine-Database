@@ -25,7 +25,8 @@ export default function SearchPdf() {
 
         const filteredPdfs = data.pdfs.filter((pdf) =>
         pdf.fileName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        pdf.path.toLowerCase().includes(searchQuery.toLowerCase())
+        pdf.path.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        pdf.ship.toLowerCase().includes(searchQuery.toLowerCase())
     );
     setFilteredPdfs(filteredPdfs);
   };
@@ -62,7 +63,7 @@ export default function SearchPdf() {
           <ul id='pdf-results'>
             {filteredPdfs.map((pdf) => (
               <li key={pdf._id}>
-                {pdf.fileName} - {pdf.path}
+                {pdf.fileName} - {pdf.path} - {pdf.ship}
                 <Link id='pdf-details' to={`/editPdf`}><i className="bi bi-clipboard-check-fill"></i></Link>
               </li>
             ))}
