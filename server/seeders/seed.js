@@ -6,30 +6,20 @@ const pdfFileData = require('./pdfFileData.json');
 
 db.once("open", async () => {
   try {
-    const existingUsers = await User.find({});
-    if (existingUsers.length === 0) {
-      await User.create(userData);
-      console.log('Users seeded');
-    } else {
-      console.log('Users already exist, skipping user seeding');
-    }
+    await User.deleteMany({});
+    await Ship.deleteMany({});
+    await Pdf.deleteMany({});
 
-    const existingShips = await Ship.find({});
-    if (existingShips.length === 0) {
-      await Ship.create(shipData);
-      console.log('Ships Seeded');
-    } else {
-      console.log('Ships already exist, skipping ship seeding');
-    }
-
-    const existingPdfs = await Pdf.find({});
-    if (existingPdfs.length === 0) {
-      await Pdf.create(pdfFileData);
-      console.log('pdfs Seeded');
-    } else {
-      console.log('Pdfs already exist, skipping pdf seeding');
-    }
-
+    const users = await User.create(userData);
+    const ships = await Ship.create(shipData);
+    for (let i = 0; i < pdfFileData.length; i++) {
+      const { _id, ship } = await Pdf.create(pdfFileData[i]);
+      await Ship.findOneAndUpdate(
+        { shipName: ship },
+        {$addToSet: {pdfs: _id}},
+        {new: true}
+      );
+      }
     console.log("All Done!");
     process.exit(0);
   } catch (err) {

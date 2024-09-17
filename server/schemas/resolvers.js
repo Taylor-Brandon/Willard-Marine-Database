@@ -5,29 +5,20 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => {
-      return await User.find({}).populate('pdfs').populate('ships');
+      return await User.find({});
     },
     user: async (parent, { userId }) => {
-      try {
-        return await User.findById(userId).populate('pdfs').populate('ships');
-      } catch (error) {
-        console.error('Error fetching user:', error);
-        throw error;
-      }
+      return User.findOne({ _id: userId });
     },
     ships: async () => {
-      return await Ship.find({}).populate('user');
+      return await Ship.find({}).populate('pdfs');
     },
     ship: async(parent, {shipId}) => {
-      try {
-        return await Ship.findById(shipId).populate('user');
-      } catch (error) {
-        console.error('Error fetching ship:', error);
-        throw error;
-      }
+      return User.findOne({ shipId }).populate('pdfs');
     },
-    pdfs: async () => {
-      return await Pdf.find({}).populate('user');
+    pdfs: async (parent, { shipName }) => {
+      const params = shipName ? { shipName } : {};
+      return Pdf.find(params);
     },
     pdf: async(parent, {pdfId}) => {
       try {
@@ -69,9 +60,9 @@ const resolvers = {
         throw error;
       }
     },
-    addPdf: async (parent, {fileName, path}) => {
+    addPdf: async (parent, {fileName, path, ship}) => {
       try {
-        return await Pdf.create({fileName, path});
+        return await Pdf.create({fileName, path, ship});
       } catch (error) {
         console.error('Error adding pdf:', error);
         throw error;
@@ -131,12 +122,13 @@ const resolvers = {
         throw new Error ('Failed to update ship information');
       }
     },
-    updatePdf: async (_, {pdfId, fileName, path}) => {
+    updatePdf: async (_, {pdfId, fileName, path, ship}) => {
       try{
         const pdf = await Pdf.findById(pdfId);
 
         if (fileName) pdf.fileName = fileName;
         if (path) pdf.path = path;
+        if (ship) pdf.ship = ship;
 
         await pdf.save();
         return pdf;

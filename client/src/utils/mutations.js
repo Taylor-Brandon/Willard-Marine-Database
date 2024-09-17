@@ -109,11 +109,12 @@ export const ADD_SHIP = gql`
   }
 `;
 export const ADD_PDF = gql`
-  mutation addPdf($fileName: String!, $path: String!) {
-    addPdf(fileName: $fileName, path: $path) {
+  mutation addPdf($fileName: String!, $path: String!, $ship: String!) {
+    addPdf(fileName: $fileName, path: $path, ship: $ship) {
         _id
         fileName
         path
+        ship
     }
   }
 `;
@@ -235,6 +236,7 @@ export const REMOVE_PDF = gql`
       _id
       fileName
       path
+      ship
     }
   }
 `;

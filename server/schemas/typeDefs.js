@@ -8,8 +8,6 @@ type User {
   email: String
   password: String
   admin: Boolean
-  pdfs: [Pdf]
-  ships: [Ship]
 }
 type Ship {
     _id: ID
@@ -36,13 +34,13 @@ type Ship {
     POCEmail: String
     POCPhoneNumber: String
     notes: String
-    user: User
+    pdfs: [Pdf]
 }
 type Pdf {
     _id: ID
     fileName: String
     path: String
-    user: User
+    ship: String
   }
   type Auth {
     token: ID!
@@ -53,7 +51,7 @@ type Pdf {
     user(userId: ID!): User
     ships: [Ship]
     ship(shipId: ID!): Ship
-    pdfs: [Pdf]
+    pdfs(shipName: String): [Pdf]
     pdf(pdfId: ID!): Pdf
 }
 type Mutation {
@@ -84,7 +82,7 @@ type Mutation {
       POCPhoneNumber: String!
       notes: String!
     ): Ship
-    addPdf(fileName: String!, path: String!): Pdf
+    addPdf(fileName: String!, path: String!, ship: String!): Pdf
     removeUser(userId: ID!): User
     updateUser(
       userId: ID
@@ -124,6 +122,7 @@ type Mutation {
       pdfId: ID
       fileName: String
       path: String
+      ship: String
     ): Pdf
     removeShip(shipId: ID!): Ship
     removePdf(pdfId: ID!): Pdf

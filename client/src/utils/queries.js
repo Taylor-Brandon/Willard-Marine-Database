@@ -48,10 +48,11 @@ export const QUERY_SHIPS = gql`
       POCName
       POCEmail
       POCPhoneNumber
-      user {
+      pdfs {
         _id
-        firstName
-        lastName
+        fileName
+        path
+        ship
       }
     }
   }
@@ -82,10 +83,11 @@ export const QUERY_SINGLE_SHIP= gql`
       POCName
       POCEmail
       POCPhoneNumber
-      user {
+      pdfs {
         _id
-        firstName
-        lastName
+        fileName
+        path
+        ship
       }
     }
   }
@@ -96,11 +98,7 @@ export const QUERY_PDFS = gql`
       _id
       fileName
       path
-      user {
-        _id
-        firstName
-        lastName
-      }
+      ship
     }
   }
 `;
@@ -111,11 +109,7 @@ export const QUERY_SINGLE_PDF = gql`
       _id
       fileName
       path
-      user {
-        _id
-        firstName
-        lastName
-      }
+      ship
     }
   }
 `;

@@ -1,11 +1,12 @@
 [
     {
         "fileName": "Chapter 14.pdf",
-        "path": "../pdfFiles/Chapter 14.pdf",
-        "user": "66be443c51651629896bc49d"
+        "path": "../uploads/Chapter 14.pdf",
+        "ship": "ABLE"
     },
     {
         "fileName": "dummy.pdf",
-        "path": "../pdfFiles/dummy.pdf"
+        "path": "../uploads/dummy.pdf",
+        "ship": "ABLE"
     }
 ]
