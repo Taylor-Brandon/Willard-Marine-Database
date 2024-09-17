@@ -127,6 +127,18 @@ export default function ChangeShip() {
                     <p>POC Name: {ship.POCName}</p>
                     <p>POC Email: {ship.POCEmail}</p>
                     <p>POC Phone Number: {ship.POCPhoneNumber}</p>
+                    <ul>
+            {ship.pdfs && ship.pdfs.length > 0 ? (
+              ship.pdfs.map((pdf) => (
+                <li key={pdf._id}>
+                  <p>File Name: {pdf.fileName}</p>
+                  <p>Path: {pdf.path}</p>
+                </li>
+              ))
+            ) : (
+              <p>No PDFs available for this ship.</p>
+            )}
+          </ul>
                     </div>
                     </div>
             )}

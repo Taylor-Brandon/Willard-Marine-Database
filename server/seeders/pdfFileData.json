@@ -1,12 +1,12 @@
 [
     {
         "fileName": "Chapter 14.pdf",
-        "path": "../pdfFiles/Chapter 14.pdf",
+        "path": "../uploads/Chapter 14.pdf",
         "ship": "ABLE"
     },
     {
         "fileName": "dummy.pdf",
-        "path": "../pdfFiles/dummy.pdf",
+        "path": "../uploads/dummy.pdf",
         "ship": "ABLE"
     }
 ]
