@@ -24,6 +24,7 @@ export default function ChangeUser() {
         firstName: '',
         lastName: '',
         email: '',
+        password: '',
         admin: false,
     });
 
@@ -36,6 +37,7 @@ export default function ChangeUser() {
                     firstName: foundUser.firstName,
                     lastName: foundUser.lastName,
                     email: foundUser.email,
+                    password: foundUser.password,
                     admin: foundUser.admin,
                 });
             }
@@ -106,6 +108,16 @@ export default function ChangeUser() {
                                     type="text"
                                     name="email"
                                     value={formData.email}
+                                    onChange={handleChange}
+                                />
+                                <label htmlFor='email' className='form-label'>Email</label>
+                            </div>
+                            <div className='form-floating ms-3 me-3'>
+                                <input
+                                    className='form-control'
+                                    type="text"
+                                    name="password"
+                                    value={formData.password}
                                     onChange={handleChange}
                                 />
                                 <label htmlFor='email' className='form-label'>Email</label>
