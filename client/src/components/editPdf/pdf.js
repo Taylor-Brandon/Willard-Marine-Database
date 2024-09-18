@@ -62,8 +62,12 @@ export default function EditPdf() {
                                                     className="btn ml-3">
                                                     <i className="bi bi-x"></i>
                                                 </button>
-                                                </div>
-                                                </div>
+                                                <button
+                                                id='viewPdf'
+                                                onClick={() => handleView(pdf)}
+                                                className="btn"
+                                                >View</button>
+                                        </div>
                                         </div>
                                     </div>
                                 ))}
