@@ -154,7 +154,7 @@ h2{
     margin-left: 70px;
 }
 #email-text{
-    margin-top: -20px;
+    margin-top: -10px;
     margin-bottom: 5px;
 }
 #admin-text{
@@ -368,15 +368,14 @@ h2{
 #editPdfHome-link{
     display: flex;
     justify-content: end;
-    margin-right: -240px;
+    margin-right: -180px;
     font-size: 30px;
     color: white;
-    margin-top: -10px;
 }
 #editPdfProfile-link{
     color: white;
     font-size: 30px;
-    margin-right: -190px;
+    margin-right: -120px;
     display: flex;
     justify-content: end;
     margin-top: -42px;
@@ -685,6 +684,26 @@ h4{
 #file-btn{
     background-color: white;
 }
-
+.pdfs-card{
+    background-color: white;
+    width: 25%;
+    height: 100px;
+    border-radius: 10px;
+}
+#pdf-header{
+    width: 25%;
+}
+#btn-area{
+    display: flex;
+    justify-content: end;
+    margin-top: -87px;
+}
+#addPdfHome-link{
+    margin-right: -270px;
+    margin-top: -10px;
+}
+#addPdfProfile-link{
+    margin-right: -210px;
+}
 
 
