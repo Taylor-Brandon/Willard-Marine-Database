@@ -25,6 +25,10 @@ export default function EditPdf() {
         }
     };
 
+    const handleView = (pdf) => {
+        window.open(`http://localhost:3001/${pdf.path}`, "_blank");
+      };
+
     if (error) return <h1>Error: {error.message}</h1>;
 
     return (
@@ -53,6 +57,11 @@ export default function EditPdf() {
                                                     className="btn ml-3">
                                                     <i className="bi bi-x"></i>
                                                 </button>
+                                                <button
+                                                id='viewPdf'
+                                                onClick={() => handleView(pdf)}
+                                                className="btn"
+                                                >View</button>
                                         </div>
                                         </div>
                                     </div>
