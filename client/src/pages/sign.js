@@ -135,12 +135,14 @@ export default function Sign() {
           </form>
           </card>
 
+        <div id='login-area'>
           <p id='login-link' className="m-5">
             Already have an account?{" "}
             <Link id="login-btn" className="link" to="/login">
               Login
             </Link>
           </p>
+          </div>
         </>
       )}
     </div>
