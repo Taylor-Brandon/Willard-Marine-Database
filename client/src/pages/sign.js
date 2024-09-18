@@ -134,13 +134,14 @@ export default function Sign() {
             <button id='submit-btn' className='btn mx-auto' type='submit'>Submit</button>
           </form>
           </card>
-
+        <div className='login'>
           <p id='login-link' className="m-5">
             Already have an account?{" "}
             <Link id="login-btn" className="link" to="/login">
               Login
             </Link>
           </p>
+          </div>
         </>
       )}
     </div>
