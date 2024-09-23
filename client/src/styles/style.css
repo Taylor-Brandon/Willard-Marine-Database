@@ -8,7 +8,9 @@ h2{
 #form{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+}
+.login{
+    margin-top: -30px;
 }
 #login-link{
     text-align: center;
@@ -141,20 +143,21 @@ h2{
     border-radius: 100px;
     width: 50px;
     height: 50px;
-    margin-top: 20px;
+    margin-top: -40px;
     margin-left: 10px;
 }
 #card-header{
+    display: flex;
+    justify-content: start;
+    margin-left: 50px;
     background-color: white;
     border-bottom: 0px;
-    margin-left: 70px;
-    margin-top: -55px;
 }
 #card-text{
-    margin-left: 85px;
+    margin-left: 70px;
 }
 #email-text{
-    margin-top: -5px;
+    margin-top: -10px;
     margin-bottom: 5px;
 }
 #admin-text{
@@ -185,9 +188,14 @@ h2{
     color: white;
     margin-top: -42px;
 }
+#edit-link{
+    color: black;
+    font-size: 20px;
+}
 #delete-btn{
     color: red;
     font-size: 30px;
+    margin-top: -5px;
 }
 #changeUserHome-link{
     color: white;
@@ -212,7 +220,7 @@ h2{
     justify-content: start;
     margin-top: 60px;
     margin-left: 400px;
-    height: 400px;
+    height: 430px;
     display: flex;
 }
 #info-card{
@@ -222,8 +230,8 @@ h2{
 #userForm-section{
     display: flex;
     justify-content: end;
-    margin-top: -400px;
-    height: 400px;
+    margin-top: -430px;
+    height: 430px;
     margin-right: 400px;
 }
 #userForm-card{
@@ -243,15 +251,14 @@ h2{
     margin-left: 100px;
 }
 #shipCard-header{
+    display: flex;
+    justify-content: start;
     background-color: white;
     border-bottom: 0px;
-    margin-left: 70px;
-    margin-top: -55px;
 }
 .ship-links{
     display: flex;
     justify-content: end;
-    margin-right: 10px;
     margin-top: -40px;
 }
 #removeShip-btn{
@@ -259,17 +266,28 @@ h2{
     margin-top: -15px;
     font-size: 30px;
 }
+.editShipForm-area{
+    margin-right: -25px;
+}
+#editShip-link{
+    color: black;
+    font-size: 20px;
+}
 #editShipHome-link{
     color: white;
     font-size: 30px;
     display: flex;
     justify-content: end;
-    margin-right: -240px;
+    margin-right: -250px;
     margin-top: -10px;
 }
-#editShip-link{
-    color: black;
-    font-size: 20px;
+#editShipProfile-link{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    margin-right: -190px;
+    margin-top: -40px;
 }
 #changeShipHome-link{
     color: white;
@@ -278,7 +296,7 @@ h2{
     justify-content: end;
     margin-right: 30px;
 }
-#changeShipProfile-link{
+#changeShip-link{
     color: white;
     font-size: 30px;
     display: flex;
@@ -286,20 +304,26 @@ h2{
     margin-right: 80px;
     margin-top: -42px;
 }
-#changeShipprofile-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-top: -42px;
-    margin-right: 70px;
-}
 #shipInfo-section{
     justify-content: start;
     margin-top: 60px;
     margin-left: 400px;
     height: 1000px;
     display: flex;
+}
+#changeShipPdf-list{
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    margin-left: -30px;
+}
+#changeShipProfile-link{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    margin-right: 100px;
+    margin-top: -42px;
 }
 #shipInfo-card{
     width: 25%;
@@ -335,7 +359,7 @@ h2{
 #shipForm-section{
     display: flex;
     justify-content: end;
-    height: 1600px;
+    height: 1570px;
     margin-top: -1000px;
     margin-right: 400px;
 }
@@ -347,15 +371,14 @@ h2{
 #editPdfHome-link{
     display: flex;
     justify-content: end;
-    margin-right: -240px;
+    margin-right: -180px;
     font-size: 30px;
     color: white;
-    margin-top: -10px;
 }
 #editPdfProfile-link{
     color: white;
     font-size: 30px;
-    margin-right: -190px;
+    margin-right: -120px;
     display: flex;
     justify-content: end;
     margin-top: -42px;
@@ -697,6 +720,28 @@ h4{
 #profileHome-btn:hover{
     color: grey;
 }
-  
+ 
+.pdfs-card{
+    background-color: white;
+    width: 25%;
+    height: 100px;
+    border-radius: 10px;
+}
+#pdf-header{
+    width: 25%;
+}
+#btn-area{
+    display: flex;
+    justify-content: end;
+    margin-top: -87px;
+}
+#addPdfHome-link{
+    margin-right: -270px;
+    margin-top: -10px;
+}
+#addPdfProfile-link{
+    margin-right: -210px;
+}
+
 
 
