@@ -104,6 +104,7 @@ export const ADD_SHIP = gql`
       POCName
       POCEmail
       POCPhoneNumber
+      createdAt
       notes
     }
   }
@@ -217,6 +218,7 @@ export const UPDATE_SHIP = gql`
       POCName
       POCEmail
       POCPhoneNumber
+      createdAt
     }
   }
 `;

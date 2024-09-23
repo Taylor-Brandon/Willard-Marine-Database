@@ -15,6 +15,9 @@ h2{
 #login-link{
     text-align: center;
 }
+#login-area{
+    margin-top: -30px;
+}
 .form-control{
     margin-top: 10px;
 }
@@ -539,28 +542,23 @@ ul{
     padding: 20px;
 }
 #userData-name{
-    display: flex;
-    justify-content: start;
+    color: white;
     margin-left: 10px;
     font-size: 25px;
 }
 #userData-email{
-    display: flex;
-    justify-content: start;
-    margin-left: 10px;
+    color: white;
+    margin-left: -30px;
+    margin-top: -20px;
     font-size: 20px;
 }
 #userData-admin{
     display: flex;
     justify-content: start;
+    color: white;
     margin-left: 10px;
+    margin-bottom: 10px;
     font-size: 20px;
-}
-.links-list{
-    display: flex;
-    justify-content: end;
-    margin-right: 20px;
-    margin-top: -100px;
 }
 #profileLog-link{
     display: flex;
@@ -684,6 +682,45 @@ h4{
 #file-btn{
     background-color: white;
 }
+#nav-area{
+    display: flex;
+    justify-content: end;
+}
+#toggle-nav{
+    color: white;
+    border: 0px;
+}
+#nav-icon{
+    display: flex;
+    justify-content: end;
+    color: white;
+    font-size: 30px;
+}
+#offcanvasDarkNavbar{
+    background-color: rgba(181,190,203,1);
+}
+#close-btn{
+    margin-top: -30px;
+}
+#profileLog-btn{
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+}
+#profileHome-btn{
+    font-size: 20px;
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+#profileLog-btn:hover{
+    color: grey;
+}
+#profileHome-btn:hover{
+    color: grey;
+}
+ 
 .pdfs-card{
     background-color: white;
     width: 25%;
@@ -705,5 +742,6 @@ h4{
 #addPdfProfile-link{
     margin-right: -210px;
 }
+
 
 

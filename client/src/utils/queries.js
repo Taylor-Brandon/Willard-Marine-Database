@@ -48,6 +48,7 @@ export const QUERY_SHIPS = gql`
       POCName
       POCEmail
       POCPhoneNumber
+      createdAt
       pdfs {
         _id
         fileName
@@ -83,6 +84,7 @@ export const QUERY_SINGLE_SHIP= gql`
       POCName
       POCEmail
       POCPhoneNumber
+      createdAt
       pdfs {
         _id
         fileName

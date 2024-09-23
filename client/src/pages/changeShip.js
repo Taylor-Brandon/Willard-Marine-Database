@@ -108,6 +108,7 @@ export default function ChangeShip() {
                     <h1 id='ship-name'>{ship.shipName} {ship.model}</h1>
                     <div id="ship-text">
                     <p>ID: {ship._id}</p>
+                    <p>Created At: {ship.createdAt}</p>
                     <p>HIN: {ship.HIN}</p>
                     <p>HRN: {ship.HRN}</p>
                     <p>Contact Number: {ship.contactNumber}</p>
