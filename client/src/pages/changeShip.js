@@ -105,8 +105,10 @@ export default function ChangeShip() {
             <div id='shipInfo-card' className='card'>
             {ship && (
                 <div>
-                    <h1 id='ship-name'>{ship.shipName} {ship.model} {ship._id}</h1>
+                    <h1 id='ship-name'>{ship.shipName} {ship.model}</h1>
                     <div id="ship-text">
+                    <p>ID: {ship._id}</p>
+                    <p>Created At: {ship.createdAt}</p>
                     <p>HIN: {ship.HIN}</p>
                     <p>HRN: {ship.HRN}</p>
                     <p>Contact Number: {ship.contactNumber}</p>

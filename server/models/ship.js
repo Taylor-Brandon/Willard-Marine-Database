@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const dateFormat = require('../utils/dateFormat');
 
 const shipSchema = new Schema({
     shipName: {
@@ -88,6 +89,11 @@ const shipSchema = new Schema({
     notes: { 
         type: String
     },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: (timestamp) => dateFormat(timestamp),
+      },
     pdfs: [
         {
             type: Schema.Types.ObjectId,

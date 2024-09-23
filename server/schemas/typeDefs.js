@@ -34,6 +34,7 @@ type Ship {
     POCEmail: String
     POCPhoneNumber: String
     notes: String
+    createdAt: String
     pdfs: [Pdf]
 }
 type Pdf {
