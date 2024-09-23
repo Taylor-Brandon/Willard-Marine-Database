@@ -43,12 +43,13 @@ export default function EditPdf() {
                             <Link id="addPdfProfile-link" to="/profile"><i className="bi bi-person"></i></Link>
                             <div id="file-list" className="flex-row justify-space-between my-4">
                                 {pdfs.map((pdf) => (
-                                    <div className="pdfs-card" key={pdf._id}>
+                                    <div id="editPdf-cards" className="card" key={pdf._id}>
                                         <div>
-                                            <div id="pdf-header">
-                                                <h4>{pdf.fileName} <br /></h4>
-                                                <h4 id="pdf-ship">{pdf.ship}</h4>
+                                            <div className="card-header" id="pdf-header">
+                                                <h4 id="editPdf-fileName">{pdf.fileName} <br /></h4>
+                                                <h6 className="card-subtitle" id="pdf-ship">{pdf.ship}</h6>
                                             </div>
+                                            <div className="card-body">
                                             <div id="btn-area">
                                                 <div id="pdf-btns">
                                                     <button
@@ -65,6 +66,7 @@ export default function EditPdf() {
                                                     >
                                                         <i className="bi bi-x"></i>
                                                     </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

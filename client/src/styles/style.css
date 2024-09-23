@@ -715,6 +715,36 @@ h4{
     flex-direction: column;
     margin-left: -30px;
 }
+#editPdf-cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 70px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+#editPdf-fileName{
+    display: flex;
+    justify-content: start;
+}
+#pdf-header{
+    border-bottom: none;
+    background-color: white;
+}
+#btn-area{
+    display: flex;
+    justify-content: end;
+    margin-top: -90px;
+}
+#addPdfHome-link{
+    margin-right: -240px;
+}
+#addPdfProfile-link{
+    margin-right: -180px;
+}
+
 
   
 
