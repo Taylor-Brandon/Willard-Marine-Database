@@ -62,7 +62,7 @@ export default function UserSearch() {
           <ul id='user-results'>
             {filteredUsers.map((user) => (
               <li key={user._id}>
-                {user.firstName} - {user.lastName} - {user.email} - {user.admin.toString()} - {user._id}
+                {user.firstName} - {user.lastName} - {user._id}
                 <Link id='user-details' to={`/user/${user._id}`}><i className="bi bi-clipboard-check-fill"></i></Link>
               </li>
             ))}
