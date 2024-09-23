@@ -521,13 +521,13 @@ ul{
     display: flex;
 }
 #logout-link{
-    font-size: 25px;
+    font-size: 30px;
     color: rgb(229, 237, 248);
     padding: 20px;
     margin-top: -20px;
 }
 #profile-link{
-    font-size: 25px;
+    font-size: 30px;
     color: rgb(229, 237, 248);
     padding: 20px;
 }
