@@ -101,38 +101,6 @@ export default function AddFile() {
       </div>
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3">
-          {loading ? (
-            <div>Loading. . .</div>
-          ) : (
-            <div>
-              <div id="file-list" className="flex-row justify-space-between my-4">
-                {pdfs.map((pdf) => (
-                  <div key={pdf._id} className="col-12 col-xl-6">
-                    <div className="card ms-3 mb-3">
-                      <nav className="card-heading">
-                        <h4 id="pdfCard-header" className="card-header p-2 m-0">
-                          {pdf.fileName} {pdf.path} <br />
-                        </h4>
-                      </nav>
-                      <div id="pdfLink-box">
-                        <button 
-                          id="pdfDelete-btn"
-                          onClick={() => handleRemovePdf(pdf._id)} 
-                          className="btn ml-3">
-                          <i className="bi bi-x"></i>
-                        </button>
-                        <button
-                          id='viewPdf'
-                          onClick={() => handleView(pdf)}
-                          className="btn"
-                        >View</button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>
