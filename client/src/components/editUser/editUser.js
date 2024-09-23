@@ -45,7 +45,7 @@ const EditUser = () => {
                                             <h4 id="card-header" className="card-header">
                                                 {user.firstName} {user.lastName} <br />
                                                 </h4>
-                                            <div id="admin-card" style={{ backgroundColor: user.admin ? 'grey' : 'orange' }}></div>
+                                                <div id="admin-card" style={{ backgroundColor: user.admin ? 'grey' : 'orange' }}></div>
                                                 <div id="link-box">
                                                 <div className="links">
                                                 <Link id='edit-link' to={`/user/${user._id}`}><i className="bi bi-pen"></i></Link>

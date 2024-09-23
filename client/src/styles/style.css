@@ -149,19 +149,21 @@ h2{
 #card-header{
     display: flex;
     justify-content: start;
-    margin-left: 50px;
     background-color: white;
+    margin-left: 60px;
     border-bottom: 0px;
 }
 #card-text{
     margin-left: 70px;
 }
 #email-text{
-    margin-top: -10px;
+    margin-top: -20px;
     margin-bottom: 5px;
+    margin-left: -10px;
 }
 #admin-text{
     margin-bottom: 10px;
+    margin-left: -10px;
 }
 #edit-list{
     font-size: 30px;
@@ -230,8 +232,8 @@ h2{
 #userForm-section{
     display: flex;
     justify-content: end;
-    margin-top: -430px;
-    height: 430px;
+    margin-top: -400px;
+    height: 420px;
     margin-right: 400px;
 }
 #userForm-card{
@@ -261,9 +263,14 @@ h2{
     justify-content: end;
     margin-top: -40px;
 }
+#editShip-link{
+    color: black;
+    font-size: 20px;
+}
 #removeShip-btn{
     color: red;
     margin-top: -15px;
+    margin-left: -20px;
     font-size: 30px;
 }
 .editShipForm-area{
@@ -282,6 +289,14 @@ h2{
     margin-top: -10px;
 }
 #editShipProfile-link{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    margin-right: -170px;
+    margin-top: -41px;
+}
+#changeShipHome-link{
     color: white;
     font-size: 30px;
     display: flex;
@@ -308,7 +323,7 @@ h2{
     justify-content: start;
     margin-top: 60px;
     margin-left: 400px;
-    height: 1000px;
+    height: 1150px;
     display: flex;
 }
 #changeShipPdf-list{
@@ -359,8 +374,8 @@ h2{
 #shipForm-section{
     display: flex;
     justify-content: end;
-    height: 1570px;
-    margin-top: -1000px;
+    height: 1580px;
+    margin-top: -1150px;
     margin-right: 400px;
 }
 #shipForm-card{
@@ -531,13 +546,13 @@ ul{
     display: flex;
 }
 #logout-link{
-    font-size: 25px;
+    font-size: 30px;
     color: rgb(229, 237, 248);
     padding: 20px;
     margin-top: -20px;
 }
 #profile-link{
-    font-size: 25px;
+    font-size: 30px;
     color: rgb(229, 237, 248);
     padding: 20px;
 }
@@ -697,29 +712,60 @@ h4{
     font-size: 30px;
 }
 #offcanvasDarkNavbar{
-    background-color: rgba(181,190,203,1);
+    background-color: white;
+}
+#userData-name{
+    color: black;
+}
+#userData-email{
+    color: black;
+}
+#userData-admin{
+    color: black;
 }
 #close-btn{
     margin-top: -30px;
+    color: black;
 }
 #profileLog-btn{
     font-size: 20px;
-    margin-top: 10px;
-    color: white;
+    color: black
 }
 #profileHome-btn{
     font-size: 20px;
-    color: white;
+    color: black;
     margin-left: 15px;
     text-decoration: none;
 }
-
 #profileLog-btn:hover{
     color: grey;
 }
 #profileHome-btn:hover{
     color: grey;
 }
+.changeShip-files{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: -30px;
+}
+#editPdf-cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 70px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+#editPdf-fileName{
+    display: flex;
+    justify-content: start;
+}
+#pdf-header{
+    border-bottom: none;
+    background-color: white;
  
 .pdfs-card{
     background-color: white;
@@ -733,6 +779,55 @@ h4{
 #btn-area{
     display: flex;
     justify-content: end;
+    margin-top: -90px;
+}
+#editPdfHome-link{
+    margin-right: -300px;
+}
+#editPdfProfile-link{
+    margin-right: -180px;
+}
+#profileUser-btn{
+    height: 40px;
+    background-color: rgba(181,190,203,1);
+}
+#profileShip-btn{
+    height: 40px;
+    background-color: rgba(181,190,203,1);
+    margin-left: 75px;
+}
+#profilePdf-btn{
+    height: 40px;
+    background-color: rgba(181,190,203,1);
+    margin-left: 75px;
+}
+#ship-cardBody{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+#user-cardBody{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+#pdf-cardBody{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+.card-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+#addPdfHome-link{
+    margin-right: -150px;
+}
+#addPdfProfile-link{
+    margin-right: -90px;
+}
     margin-top: -87px;
 }
 #addPdfHome-link{

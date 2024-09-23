@@ -105,7 +105,7 @@ export default function ChangeShip() {
             <div id='shipInfo-card' className='card'>
             {ship && (
                 <div>
-                    <h1 id='ship-name'>{ship.shipName} {ship.model}</h1>
+                    <h1 id='ship-name'>{ship.shipName}</h1>
                     <div id="ship-text">
                     <p>ID: {ship._id}</p>
                     <p>Created At: {ship.createdAt}</p>
@@ -129,10 +129,10 @@ export default function ChangeShip() {
                     <p>POC Name: {ship.POCName}</p>
                     <p>POC Email: {ship.POCEmail}</p>
                     <p>POC Phone Number: {ship.POCPhoneNumber}</p>
-                    <ul id='changeShipPdf-list'>
+                    <ul className='changeShip-files'>
             {ship.pdfs && ship.pdfs.length > 0 ? (
               ship.pdfs.map((pdf) => (
-                <li key={pdf._id}>
+                <li id='indv-file' key={pdf._id}>
                   <p>File Name: {pdf.fileName}</p>
                 </li>
               ))
