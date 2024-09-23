@@ -687,19 +687,28 @@ h4{
     font-size: 30px;
 }
 #offcanvasDarkNavbar{
-    background-color: rgba(181,190,203,1);
+    background-color: white;
+}
+#userData-name{
+    color: black;
+}
+#userData-email{
+    color: black;
+}
+#userData-admin{
+    color: black;
 }
 #close-btn{
     margin-top: -30px;
+    color: black;
 }
 #profileLog-btn{
     font-size: 20px;
-    margin-top: 10px;
-    color: white;
+    color: black
 }
 #profileHome-btn{
     font-size: 20px;
-    color: white;
+    color: black;
     margin-left: 15px;
     text-decoration: none;
 }
@@ -744,6 +753,43 @@ h4{
 #addPdfProfile-link{
     margin-right: -180px;
 }
+#profileUser-btn{
+    height: 40px;
+    background-color: rgba(181,190,203,1);
+}
+#profileShip-btn{
+    height: 40px;
+    background-color: rgba(181,190,203,1);
+    margin-left: 75px;
+}
+#profilePdf-btn{
+    height: 40px;
+    background-color: rgba(181,190,203,1);
+    margin-left: 75px;
+}
+#ship-cardBody{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+#user-cardBody{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+#pdf-cardBody{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+.card-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+
+
 
 
   

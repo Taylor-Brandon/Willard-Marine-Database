@@ -25,7 +25,7 @@ export default function Nav() {
           <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div className="offcanvas-header">
             <h1 id='userData-name'>{userData.firstName} {userData.lastName}</h1>
-              <button id='close-btn' type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button id='close-btn' type="button" className="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -38,10 +38,10 @@ export default function Nav() {
                 <li className='nav-item'>
                 </li>
                 <li className="nav-item">
-                <button id='profileLog-btn' className='btn' onClick={logout}>Logout</button>
+                <Link id='profileHome-btn' to="/home">Home</Link>
                 </li>
                 <li className="nav-item">
-                <Link id='profileHome-btn' to="/home">Home</Link>
+                <button id='profileLog-btn' className='btn' onClick={logout}>Logout</button>
                 </li>
               </ul>
             </div>
