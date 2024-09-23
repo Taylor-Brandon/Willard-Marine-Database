@@ -42,10 +42,10 @@ const EditUser = () => {
                                     <div key={user._id} className="col-12 col-xl-6 ms-2">
                                         <div className="card mb-3">
                                             <nav className="card-heading">
-                                            <div id="admin-card" style={{ backgroundColor: user.admin ? 'grey' : 'orange' }}></div>
                                             <h4 id="card-header" className="card-header">
                                                 {user.firstName} {user.lastName} <br />
                                                 </h4>
+                                                <div id="admin-card" style={{ backgroundColor: user.admin ? 'grey' : 'orange' }}></div>
                                                 <div id="link-box">
                                                 <div className="links">
                                                 <Link id='edit-link' to={`/user/${user._id}`}><i className="bi bi-pen"></i></Link>
