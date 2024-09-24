@@ -27,6 +27,7 @@ import Profile from './pages/profile';
 import RenderPdf from './components/renderPdf/renderPdf';
 import ShipSearch from './components/shipSearch/shipSearch';
 import Nav from './components/nav/nav';
+import LinkBar from './components/linkBar/linkBar';
 
 
 const httpLink = createHttpLink({
@@ -88,6 +89,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/renderPdf" element={<RenderPdf />} />
             <Route path="/nav" element={<Nav />} />
+            <Route path="/linkBar" element={<LinkBar />} />
           </Routes>
         </Router>
       </ApolloProvider>

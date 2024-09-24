@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LinkBar from '../linkBar/linkBar';
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_PDFS } from "../../utils/queries";
 import { REMOVE_PDF } from "../../utils/mutations";
@@ -39,8 +40,9 @@ export default function EditPdf() {
                         <div>Loading. . .</div>
                     ) : (
                         <div>
-                            <Link id="addPdfHome-link" to="/home"><i className="bi bi-house"></i></Link>
-                            <Link id="addPdfProfile-link" to="/profile"><i className="bi bi-person"></i></Link>
+                            <div id="editPdf-links">
+                            <LinkBar />
+                            </div>
                             <div id="file-list" className="flex-row justify-space-between my-4">
                                 {pdfs.map((pdf) => (
                                     <div id="editPdf-cards" className="card" key={pdf._id}>

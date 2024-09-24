@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import LinkBar from '../linkBar/linkBar';
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
@@ -55,8 +56,9 @@ export default function AddUser() {
         <Navigate to="/userList" />
       ) : (
         <>
-        <Link id='addUserHome-link' to="/home"><i class="bi bi-house"></i></Link>
-        <Link id='addUserProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
+        <div id="userForm-links">
+       <LinkBar />
+       </div>
         <h2>Add a User</h2>
         <card id='addUser-form'>
         <form className="form w-50 p-2" onSubmit={handleFormSubmit}>

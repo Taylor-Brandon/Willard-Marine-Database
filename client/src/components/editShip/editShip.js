@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LinkBar from '../linkBar/linkBar';
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_SHIPS } from "../../utils/queries";
 import { REMOVE_SHIP } from "../../utils/mutations";
@@ -34,8 +35,9 @@ export default function EditShip() {
                         <div>Loading. . .</div>
                     ) : (
                         <div>
-                            <Link id='editShipHome-link' to="/home"><i class="bi bi-house"></i></Link>
-                            <Link id='editShipProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
+                            <div id="editShip-links">
+                           <LinkBar />
+                           </div>
                             <div id="ship-list" className="flex-row justify-space-betweeen my-4">
                             {ships.map((ship) => (
                                 <div key={ship._id} className="col-12 col-xl-6 ms-2">

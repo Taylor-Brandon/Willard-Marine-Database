@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import LinkBar from '../linkBar/linkBar';
 import { useQuery } from "@apollo/client";
 import { QUERY_SHIPS } from "../../utils/queries";
 import "../../styles/style.css";
@@ -54,8 +55,7 @@ export default function ShipSearch() {
 
   return (
     <section>
-        <Link id="shipSearchHome-link" to="/home"><i className="bi bi-house"></i></Link>
-        <Link id='shipSearchProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
+        <LinkBar />
       <div id='shipSearch-input'>
       <form className="form w-50" onSubmit={handleFormSubmit}>
         <div className="form-control p-3 mb-2">

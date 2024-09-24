@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LinkBar from '../linkBar/linkBar';
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_USERS } from "../../utils/queries";
 import { REMOVE_USER } from "../../utils/mutations";
@@ -35,8 +36,9 @@ const EditUser = () => {
                         <div>Loading. . .</div>
                     ) : (
                         <div>
-                             <Link id="home-link" to="/home"><i className="bi bi-house"></i></Link>
-                             <Link id='editUserProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
+                            <div id="editUser-links">
+                             <LinkBar />
+                             </div>
                             <div id="user-list" className="flex-row justify-space-between my-4">
                                 {users.map((user) => (
                                     <div key={user._id} className="col-12 col-xl-6 ms-2">

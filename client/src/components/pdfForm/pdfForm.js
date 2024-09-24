@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import LinkBar from '../linkBar/linkBar';
 import { useQuery, useMutation } from "@apollo/client";
 import { ADD_PDF } from '../../utils/mutations'; 
 import { QUERY_PDFS } from "../../utils/queries";
@@ -50,9 +51,9 @@ export default function AddFile() {
   };
   return (
     <div className='container'>
-      <Link id="editPdfHome-link" to="/home"><i className="bi bi-house"></i></Link>
-      <Link id='editPdfProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
-      
+      <div id='pdfForm-links'>
+      <LinkBar />
+      </div>
       <div className="File-Form">
         <form className="formStyle" onSubmit={handleSubmit}>
           <h4>Upload PDF File</h4>

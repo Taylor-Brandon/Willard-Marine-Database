@@ -44,21 +44,6 @@ h2{
     width: 50%;
     background-color: rgb(229, 237, 248);
 }
-#addUserHome-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: -180px;
-}
-#addUserProfile-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: -120px;
-    margin-top: -42px;
-}
 #addUser-form{
     display: flex;
     justify-content: center;
@@ -85,21 +70,6 @@ h2{
     justify-content: center;
     width: 50%;
     background-color: rgb(229, 237, 248);
-}
-#addPdfHome-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: 20px;
-}
-#addPdfProfile-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: 80px;
-    margin-top: -42px;
 }
 #addFile{
     display: flex;
@@ -174,22 +144,6 @@ h2{
     justify-content: end;
     margin-top: -55px;
 }
-#home-link{
-    display: flex;
-    justify-content: end;
-    font-size: 30px;
-    margin-right: -260px;
-    color: white;
-    margin-top: -10px;
-}
-#editUserProfile-link{
-    display: flex;
-    justify-content: end;
-    font-size: 30px;
-    margin-right: -200px;
-    color: white;
-    margin-top: -42px;
-}
 #edit-link{
     color: black;
     font-size: 20px;
@@ -198,21 +152,6 @@ h2{
     color: red;
     font-size: 30px;
     margin-top: -5px;
-}
-#changeUserHome-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: 30px;
-}
-#changeUserProfile-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: 100px;
-    margin-top: -42px;
 }
 #user-name{
     text-align: center;
@@ -280,37 +219,6 @@ h2{
     color: black;
     font-size: 20px;
 }
-#editShipHome-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: -250px;
-    margin-top: -10px;
-}
-#editShipProfile-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: -170px;
-    margin-top: -41px;
-}
-#changeShipHome-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: -190px;
-    margin-top: -40px;
-}
-#changeShipHome-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: 30px;
-}
 #changeShip-link{
     color: white;
     font-size: 30px;
@@ -356,21 +264,6 @@ h2{
     margin-left: 100px;
      background-color: rgb(229, 237, 248);
 }
-#shipFormHome-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: 20px;
-}
-#shipFormProfile-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: 70px;
-    margin-top: -42px;
-}
 #shipForm-section{
     display: flex;
     justify-content: end;
@@ -382,21 +275,6 @@ h2{
     width: 25%;
     display: flex;
     border-radius: 20px;
-}
-#editPdfHome-link{
-    display: flex;
-    justify-content: end;
-    margin-right: -180px;
-    font-size: 30px;
-    color: white;
-}
-#editPdfProfile-link{
-    color: white;
-    font-size: 30px;
-    margin-right: -120px;
-    display: flex;
-    justify-content: end;
-    margin-top: -42px;
 }
 #file-list{
     display: flex;
@@ -418,21 +296,6 @@ h2{
 #pdfDelete-btn{
     color: red;
     font-size: 30px;
-}
-#userSearchHome-link{
-    display: flex;
-    justify-content: end;
-    color: white;
-    margin-right: 10px;
-    font-size: 30px;
-}
-#userSearchProfile-link{
-    display: flex;
-    justify-content: end;
-    color: white;
-    font-size: 30px;
-    margin-top: -42px;
-    margin-right: 70px;
 }
 #userSearch-input{
     display: flex;
@@ -494,21 +357,6 @@ h2{
     color: rgb(229, 237, 248);
     margin-left: 10px;
     font-size: 25px;
-}
-#searchPdfHome-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: 20px;
-}
-#searchPdfProfile-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: 70px;
-    margin-top: -42px;
 }
 #pdfSearch-input{
     display: flex;
@@ -660,25 +508,6 @@ ul{
     color: black;
     margin-right: 30px;
 }
-#addPdf-link{
-    color: black;
-    margin-right: 30px;
-}
-#shipSearchHome-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: 20px;
-}
-#shipSearchProfile-link{
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: end;
-    margin-right: 70px;
-    margin-top: -42px;
-}
 .File-Form{
     display: flex;
     justify-content: center;
@@ -781,12 +610,6 @@ h4{
     justify-content: end;
     margin-top: -90px;
 }
-#editPdfHome-link{
-    margin-right: -300px;
-}
-#editPdfProfile-link{
-    margin-right: -180px;
-}
 #profileUser-btn{
     height: 40px;
     background-color: rgba(181,190,203,1);
@@ -822,21 +645,41 @@ h4{
     margin-bottom: -10px;
     margin-top: -10px;
 }
-#addPdfHome-link{
-    margin-right: -150px;
+#homeLink{
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    color: white;
+    font-size: 30px;
 }
-#addPdfProfile-link{
-    margin-right: -90px;
+#profileLink{
+    display: flex;
+    justify-content: end;
+    margin-right: 80px;
+    margin-top: -42px;
+    color: white;
+    font-size: 30px;
 }
-    margin-top: -87px;
+#editUser-links{
+    margin-right: -280px;
+    margin-top: -16px;
 }
-#addPdfHome-link{
-    margin-right: -270px;
-    margin-top: -10px;
+#userForm-links{
+    margin-right: -192px;
 }
-#addPdfProfile-link{
-    margin-right: -210px;
+#editShip-links{
+    margin-right: -280px;
+    margin-top: -16px;
 }
-
+#editPdf-links{
+ margin-right: -280px;
+ margin-top: -16px;
+}
+#pdfForm-links{
+    margin-right: -192px;
+}
+#addPdf-link{
+    color: black;
+}
 
 
