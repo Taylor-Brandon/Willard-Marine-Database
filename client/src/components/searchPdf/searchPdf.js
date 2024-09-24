@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import LinkBar from '../linkBar/linkBar';
 import { useQuery } from "@apollo/client";
 import { QUERY_PDFS } from "../../utils/queries";
 import '../../styles/style.css';
@@ -37,8 +38,7 @@ export default function SearchPdf() {
 
   return (
     <section>
-      <Link id="searchPdfHome-link" to="/home"><i className="bi bi-house"></i></Link>
-        <Link id='searchPdfProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
+      <LinkBar />
       <div id='pdfSearch-input'>
       <form className="form w-50" onSubmit={handleFormSubmit}>
         <div className="form-control p-3 mb-2">

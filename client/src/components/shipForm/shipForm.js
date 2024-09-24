@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import LinkBar from '../linkBar/linkBar';
 import { useMutation } from "@apollo/client";
 import { ADD_SHIP } from "../../utils/mutations";
 import "../../styles/style.css";
@@ -60,8 +61,7 @@ export default function AddShip() {
 
         return(
           <div>
-            <Link id="shipFormHome-link" to="/home"><i className="bi bi-house"></i></Link>
-            <Link id='shipFormProfile-link' to="/profile"><i className="bi bi-person"></i></Link>
+            <LinkBar />
             <card id='ship-form'>
                   <form className="form w-25" onSubmit={handleFormSubmit}>
                     <div className="input-fields">
