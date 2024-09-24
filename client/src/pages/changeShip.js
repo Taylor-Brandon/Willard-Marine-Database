@@ -134,7 +134,6 @@ export default function ChangeShip() {
               ship.pdfs.map((pdf) => (
                 <li id='indv-file' key={pdf._id}>
                   <p>File Name: {pdf.fileName}</p>
-                  <p>Path: {pdf.path}</p>
                 </li>
               ))
             ) : (

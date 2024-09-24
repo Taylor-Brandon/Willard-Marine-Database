@@ -47,7 +47,9 @@ export default function EditShip() {
                 {ship.shipName}<br />
                 </h4>
                 <div className="ship-links">
+                    <div className="editShipForm-area">
                 <Link id="editShip-link" to={`/ship/${ship._id}`}><i className="bi bi-pen"></i></Link>
+                </div>
                 <button
                 id="removeShip-btn" 
                 onClick={() => handleRemoveShip(ship._id)} 

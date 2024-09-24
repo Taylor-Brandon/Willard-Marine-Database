@@ -49,27 +49,6 @@ export default function AddFile() {
       alert("Please select a file and enter a ship name.");
     }
   };
-
-  const [removePdf] = useMutation(REMOVE_PDF, {
-    onCompleted: () => {
-      window.alert("Pdf file Removed Successfully");
-    },
-    onError: (error) => {
-      window.alert(error.message);
-    },
-    refetchQueries: [{ query: QUERY_PDFS }]
-  });
-
-  const handleRemovePdf = (pdfId) => {
-    if (window.confirm("Are you sure you want to remove this file?")) {
-      removePdf({ variables: { pdfId } });
-    }
-  };
-
-  const handleView = (pdf) => {
-    window.open(`http://localhost:3001/${pdf.path}`, "_blank");
-  };
-
   return (
     <div className='container'>
       <div id='pdfForm-links'>
