@@ -92,7 +92,7 @@ export default function AddFile() {
             type="text"
             className='form-control'
             onChange={handleFormChange} 
-            placeholder="Ship Name"
+            placeholder="PDF Name"
           />
           <br />
           <div className='btn-area'>

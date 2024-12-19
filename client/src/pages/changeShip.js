@@ -369,7 +369,7 @@ export default function ChangeShip() {
                     />
                     <label htmlFor='POCPhoneNumber' className='form-label'>POC Phone Number</label>
                     </div>
-                <button id='editShip-btn' className='btn' type="submit" disabled={loading}>Update User</button>
+                <button id='editShip-btn' className='btn' type="submit" disabled={loading}>Update Ship</button>
 {error && <p>Error: {error.message}</p>}
 </form>
 </div>
